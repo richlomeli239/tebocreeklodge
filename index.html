@@ -8,117 +8,104 @@
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    logoBlue: '#0B4EA2',      /* Logo Royal Blue */
-                    logoBlueDark: '#083B7A',  /* Darker Shade for Button Hovers */
-                    iceBlue: '#EBF3FA',       /* Soft Blue Tint for Background Highlights */
-                    slateCard: '#F8FAFC',     /* Light Slate for Content Cards */
-                    slateBorder: '#E2E8F0',   /* Subtle Gray Card Borders */
-                    textDark: '#0F172A'       /* Deep Slate Navy for Crisp Readability */
-                }
-            }
-        }
-    }
-</script>
 </head>
-<body class="bg-brandDark text-gray-100 font-sans antialiased min-h-screen flex flex-col">
+<body class="bg-white text-slate-900 font-sans antialiased min-h-screen flex flex-col">
 
-    <!-- Sticky Mobile Call Header -->
-    <div class="bg-brandGold text-brandDark font-bold text-center py-2.5 px-4 sticky top-0 z-50 shadow-lg flex justify-between items-center max-w-7xl mx-auto rounded-b-md w-full">
+    <!-- Sticky Mobile Call Header (Royal Blue Background) -->
+    <div style="background-color: #0B4EA2;" class="text-white font-bold text-center py-2.5 px-4 sticky top-0 z-50 shadow-md flex justify-between items-center max-w-7xl mx-auto rounded-b-md w-full">
         <span class="hidden md:inline text-sm font-semibold tracking-wide">Planning your trip to Truman Lake? Call for room availability & rates!</span>
         <span class="text-xs sm:text-sm md:hidden font-bold uppercase tracking-wider">Lodging & Info Line</span>
-        <a href="tel:16600000000" class="bg-brandGreen text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold hover:bg-opacity-90 transition shadow-md flex items-center gap-1.5">
+        <a href="tel:16604777777" style="color: #0B4EA2;" class="bg-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-extrabold hover:bg-slate-100 transition shadow flex items-center gap-1.5">
             <span>📞</span> <span>(660) 477-7777</span>
         </a>
     </div>
 
-    <!-- Navigation Bar -->
-    <nav class="bg-brandGreen border-b border-brandAccent px-6 py-4">
+    <!-- Navigation Bar with Logo -->
+    <nav class="bg-white border-b border-slate-200 px-6 py-3 shadow-sm">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <a href="index.html" class="text-2xl font-black tracking-wider text-brandGold uppercase flex items-center gap-2">
-                <span></span> TEBO CREEK LODGE BAR & GRILL
+            <!-- Business Logo -->
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="TCL-Logo-fw.jpg" alt="Tebo Creek Lodge Bar & Grill Logo" class="h-14 w-auto object-contain">
             </a>
-            <div class="flex flex-wrap justify-center gap-6 font-medium text-sm tracking-wide">
-                <a href="index.html" class="text-brandGold font-bold border-b-2 border-brandGold pb-0.5">Home</a>
-                <a href="lodging.html" class="text-gray-300 hover:text-brandGold transition">Lodging & Cabins</a>
-                <a href="bar-and-grill.html" class="text-gray-300 hover:text-brandGold transition">TEBO's Sports Bar & Grill</a>
-                <a href="outdoors.html" class="text-gray-300 hover:text-brandGold transition">Truman Lake Fishing</a>
-                <a href="contact.html" class="text-gray-300 hover:text-brandGold transition">Location & Hours</a>
+            
+            <!-- Navigation Links -->
+            <div class="flex flex-wrap justify-center gap-6 font-semibold text-sm tracking-wide">
+                <a href="index.html" style="color: #0B4EA2; border-color: #0B4EA2;" class="font-extrabold border-b-2 pb-1">Home</a>
+                <a href="lodging.html" class="text-slate-600 hover:text-blue-700 transition">Lodging & Cabins</a>
+                <a href="bar-and-grill.html" class="text-slate-600 hover:text-blue-700 transition">TEBO's Sports Bar & Grill</a>
+                <a href="outdoors.html" class="text-slate-600 hover:text-blue-700 transition">Truman Lake Fishing</a>
+                <a href="contact.html" class="text-slate-600 hover:text-blue-700 transition">Location & Hours</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="relative bg-brandAccent py-20 px-6 text-center border-b border-gray-800">
+    <!-- Hero Section (Ice Blue Background with Deep Navy Headlines) -->
+    <header style="background-color: #EBF3FA;" class="relative py-20 px-6 text-center border-b border-slate-200">
         <div class="max-w-4xl mx-auto">
-            <span class="bg-brandGreen text-brandGold text-xs font-bold uppercase px-3.5 py-1.5 rounded-full tracking-widest inline-block mb-4 border border-brandGold/30">
+            <span style="background-color: #0B4EA2;" class="text-white text-xs font-bold uppercase px-4 py-1.5 rounded-full tracking-widest inline-block mb-4 shadow-sm">
                 Clinton, MO • Near Truman Lake Windsor Crossing
             </span>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+            <h1 style="color: #0F172A;" class="text-4xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight">
                 Your Basecamp for Truman Lake Outdoors & Good Times
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Comfortable lodging for fishermen, hunters and travelers—paired with TEBO's, the legendary attached full service sports bar & grill that features a dancefloor, jukebox, darts, karaoke, pool tables and more.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="tel:16600000000" class="bg-brandGold text-brandDark font-bold px-8 py-4 rounded-lg text-lg hover:bg-yellow-500 transition shadow-xl flex items-center justify-center gap-2">
+                <a href="tel:16604777777" style="background-color: #0B4EA2;" class="text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-blue-900 transition shadow-lg flex items-center justify-center gap-2">
                     <span>📞</span> Call to Reserve Your Room
                 </a>
-                <a href="bar-and-grill.html" class="border-2 border-brandGold text-brandGold font-bold px-8 py-4 rounded-lg text-lg hover:bg-brandGold hover:text-brandDark transition flex items-center justify-center">
+                <a href="bar-and-grill.html" style="color: #0B4EA2; border-color: #0B4EA2;" class="bg-white border-2 font-bold px-8 py-4 rounded-lg text-lg hover:bg-slate-50 transition flex items-center justify-center shadow-sm">
                     View Bar & Grill Menu
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Core Highlights Grid -->
+    <!-- Core Highlights Grid (Slate Cards with Royal Blue Headings) -->
     <main class="flex-grow">
         <section class="py-16 px-6 max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-white mb-3">Welcome to Tebo Creek Lodge Bar & Grill</h2>
-                <p class="text-gray-400 max-w-xl mx-auto">Whether you're off the water after a day of crappie fishing or looking for some food, fun and spirits, we've got you covered.</p>
+                <h2 style="color: #0F172A;" class="text-3xl font-extrabold mb-3">Welcome to Tebo Creek Lodge Bar & Grill</h2>
+                <p class="text-slate-600 max-w-xl mx-auto">Whether you're off the water after a day of crappie fishing or looking for some food, fun and spirits, we've got you covered.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-brandCard p-8 rounded-xl border border-brandAccent hover:border-brandGold/50 transition">
+                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
                     <div class="text-4xl mb-4">🎣</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Sportsman Approved</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
+                    <h3 style="color: #0B4EA2;" class="text-xl font-bold mb-2">Sportsman Approved</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
                         Conveniently located near Truman Lake ramps at Windsor Crossing. Spacious boat parking with electrical hookups and fish cleaning station access.
                     </p>
                 </div>
                 <!-- Feature 2 -->
-                <div class="bg-brandCard p-8 rounded-xl border border-brandAccent hover:border-brandGold/50 transition">
+                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
                     <div class="text-4xl mb-4">🍺</div>
-                    <h3 class="text-xl font-bold text-white mb-2">TEBO's Sports Bar & Grill</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                       Full service bar and grill entertainment hotspot with multiple TVs showing all the games, along with dancing, karaoke, darts, pool tables and more.
+                    <h3 style="color: #0B4EA2;" class="text-xl font-bold mb-2">TEBO's Sports Bar & Grill</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Full service bar and grill entertainment hotspot with multiple TVs showing all the games, along with dancing, karaoke, darts, pool tables and more.
                     </p>
                 </div>
                 <!-- Feature 3 -->
-                <div class="bg-brandCard p-8 rounded-xl border border-brandAccent hover:border-brandGold/50 transition">
+                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
                     <div class="text-4xl mb-4">🛏️</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Clean Cabin Rooms</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
+                    <h3 style="color: #0B4EA2;" class="text-xl font-bold mb-2">Clean Cabin Rooms</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
                         Air-conditioned, comfortable room quarters designed to give outdoorsmen and families a restful stay.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Direct Phone Booking Callout -->
-        <section class="bg-brandAccent py-14 px-6 text-center border-y border-gray-800">
+        <!-- Direct Phone Booking Callout (Royal Blue Banner with High-Contrast White Card) -->
+        <section style="background-color: #0B4EA2;" class="py-14 px-6 text-center text-white shadow-inner">
             <div class="max-w-3xl mx-auto">
                 <h2 class="text-3xl font-bold text-white mb-3">Ready to Plan Your Trip?</h2>
-                <p class="text-gray-300 mb-8 text-lg">
+                <p class="text-blue-100 mb-8 text-lg">
                     We manage all cabin reservations over the phone to ensure you get the exact setup, boat parking, and dates you need.
                 </p>
-                <a href="tel:16600000000" class="inline-block bg-brandGold text-brandDark font-extrabold text-xl px-8 py-4 rounded-lg hover:bg-yellow-500 transition shadow-2xl">
+                <a href="tel:16604777777" style="color: #0B4EA2;" class="inline-block bg-white font-extrabold text-xl px-8 py-4 rounded-lg hover:bg-slate-100 transition shadow-2xl">
                     Call Us Direct: (660) 477-7777
                 </a>
             </div>
@@ -126,9 +113,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-brandDark py-8 px-6 text-center text-gray-500 text-sm border-t border-gray-800">
+    <footer class="bg-slate-100 py-8 px-6 text-center text-slate-500 text-sm border-t border-slate-200">
         <p>&copy; 2026 Tebo Creek Lodge, Sports Bar & Grill • Clinton, MO</p>
-        <p class="mt-2 text-xs text-gray-600">Located near Truman Lake, Windsor Crossing. All room reservations strictly via telephone.</p>
+        <p class="mt-2 text-xs text-slate-400">Located near Truman Lake, Windsor Crossing. All room reservations strictly via telephone.</p>
     </footer>
 
 </body>
