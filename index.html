@@ -57,7 +57,15 @@
       },
       "url": "https://tebocreeklodge.net",
       "telephone": "+1-660-477-7777",
-      "servesCuisine": ["American", "Burgers", "Wings", "Bar Food"],
+      "servesCuisine": [
+        "American",
+        "Burgers",
+        "Wings",
+        "Full Bar",
+        "Liquor & Cocktails",
+        "Draft Beer",
+        "Craft & Domestic Bottled Beer"
+      ],
       "priceRange": "$$",
       "hasMenu": "https://tebocreeklodge.net/#grill",
       "address": {
@@ -71,7 +79,22 @@
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Live Karaoke Nights",
+          "name": "Full-Service Bar with Liquor & Cocktails",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Draft Beer on Tap",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Bottled Beer & Bucket Specials",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Weekend Live Karaoke",
           "value": true
         },
         {
@@ -107,6 +130,29 @@
         "https://www.facebook.com/tebocreeklodgesportsbargrill",
         "https://www.instagram.com/tebocreeklodgesportsbargrill/"
       ]
+    },
+    {
+      "@type": "MusicEvent",
+      "@id": "https://tebocreeklodge.net/#weekend-karaoke",
+      "name": "Weekend Live Karaoke at Tebo Creek",
+      "description": "Live karaoke and dancing every Friday and Saturday night with full bar service, cold beer, cocktails, and TouchTunes.",
+      "location": {
+        "@id": "https://tebocreeklodge.net/#dining"
+      },
+      "eventSchedule": {
+        "@type": "Schedule",
+        "byDay": [
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday"
+        ],
+        "startTime": "20:00",
+        "endTime": "01:00",
+        "scheduleTimezone": "America/Chicago"
+      },
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "isAccessibleForFree": true,
+      "typicalAgeRange": "21+"
     }
   ]
 }
