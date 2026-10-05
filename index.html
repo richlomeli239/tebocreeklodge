@@ -1,274 +1,681 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tebo Creek Lodge | Motel & Sports Bar near Truman Lake
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Motel",
-      "@id": "https://tebocreeklodge.net/#motel",
-      "name": "Tebo Creek Lodge",
-      "description": "Clean, comfortable motel lodging near Truman Lake with dedicated boat and trailer parking.",
-      "url": "https://tebocreeklodge.net",
-      "telephone": "+1-660-477-7777",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "293 SE Hwy PP",
-        "addressLocality": "Clinton",
-        "addressRegion": "MO",
-        "postalCode": "64735",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 38.3582,
-        "longitude": -93.6394
-      },
-      "amenityFeature": [
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Boat and Trailer Parking with Power Hookups",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Pet-Friendly Rooms",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Free High-Speed Wi-Fi",
-          "value": true
-        }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/tebocreeklodgesportsbargrill",
-        "https://www.instagram.com/tebocreeklodgesportsbargrill/"
-      ]
-    },
-    {
-      "@type": ["BarOrPub", "Restaurant"],
-      "@id": "https://tebocreeklodge.net/#dining",
-      "name": "Tebo Creek Sports Bar & Grill",
-      "parentOrganization": {
-        "@id": "https://tebocreeklodge.net/#motel"
-      },
-      "url": "https://tebocreeklodge.net",
-      "telephone": "+1-660-477-7777",
-      "servesCuisine": [
-        "American",
-        "Burgers",
-        "Wings",
-        "Full Bar",
-        "Liquor & Cocktails",
-        "Draft Beer",
-        "Craft & Domestic Bottled Beer"
-      ],
-      "priceRange": "$$",
-      "hasMenu": "https://tebocreeklodge.net/#grill",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "293 SE Hwy PP",
-        "addressLocality": "Clinton",
-        "addressRegion": "MO",
-        "postalCode": "64735",
-        "addressCountry": "US"
-      },
-      "amenityFeature": [
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Full-Service Bar with Liquor & Cocktails",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Draft Beer on Tap",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Bottled Beer & Bucket Specials",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Weekend Live Karaoke",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Billiards & Pool Tables",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "TouchTunes Digital Jukebox",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Dance Floor",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Sports TV Screens",
-          "value": true
-        }
-      ],
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "11:00",
-          "closes": "23:00"
-        }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/tebocreeklodgesportsbargrill",
-        "https://www.instagram.com/tebocreeklodgesportsbargrill/"
-      ]
-    },
-    {
-      "@type": "MusicEvent",
-      "@id": "https://tebocreeklodge.net/#weekend-karaoke",
-      "name": "Weekend Live Karaoke at Tebo Creek",
-      "description": "Live karaoke and dancing every Friday and Saturday night with full bar service, cold beer, cocktails, and TouchTunes.",
-      "location": {
-        "@id": "https://tebocreeklodge.net/#dining"
-      },
-      "eventSchedule": {
-        "@type": "Schedule",
-        "byDay": [
-          "https://schema.org/Friday",
-          "https://schema.org/Saturday"
-        ],
-        "startTime": "20:00",
-        "endTime": "01:00",
-        "scheduleTimezone": "America/Chicago"
-      },
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "isAccessibleForFree": true,
-      "typicalAgeRange": "21+"
-    }
-  ]
-}
-</script>
-</head>
-<body class="bg-white text-slate-900 font-sans antialiased min-h-screen flex flex-col">
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tebo Creek Lodge | Motel &amp; Sports Bar near Truman Lake</title>
 
-    <!-- Sticky Mobile Call Header (Royal Blue Background) -->
-    <div style="background-color: #0B4EA2;" class="text-white font-bold text-center py-2.5 px-4 sticky top-0 z-50 shadow-md flex justify-between items-center max-w-7xl mx-auto rounded-b-md w-full">
-        <span class="hidden md:inline text-sm font-semibold tracking-wide">Planning your trip to Truman Lake? Call for room availability & rates!</span>
-        <span class="text-xs sm:text-sm md:hidden font-bold uppercase tracking-wider">Lodging & Info Line</span>
-        <a href="tel:16604777777" style="color: #0B4EA2;" class="bg-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-extrabold hover:bg-slate-100 transition shadow flex items-center gap-1.5">
-            <span>📞</span> <span>(660) 477-7777</span>
+    <meta
+      name="description"
+      content="Tebo Creek Lodge is a clean, comfortable motel and sports bar near Truman Lake in Clinton, Missouri, with boat parking, fishing access, and a full-service bar and grill."
+    />
+    <meta
+      name="keywords"
+      content="Tebo Creek Lodge, Truman Lake lodging, motel near Truman Lake, sports bar in Clinton MO, boat parking, fishing lodge, Clinton Missouri lodging"
+    />
+    <meta name="theme-color" content="#0B4EA2" />
+    <link rel="canonical" href="https://tebocreeklodge.net/" />
+
+    <meta property="og:title" content="Tebo Creek Lodge | Motel & Sports Bar near Truman Lake" />
+    <meta
+      property="og:description"
+      content="Your basecamp for Truman Lake food, fun, and spirits. Comfortable lodging, sports bar, and easy access to the lake."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tebocreeklodge.net/" />
+    <meta property="og:image" content="https://tebocreeklodge.net/TCL-Logo-fw.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tebo Creek Lodge" />
+    <meta
+      name="twitter:description"
+      content="Comfortable lodging near Truman Lake with a full-service sports bar and grill."
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Motel",
+            "@id": "https://tebocreeklodge.net/#motel",
+            "name": "Tebo Creek Lodge",
+            "description": "Clean, comfortable motel lodging near Truman Lake with dedicated boat and trailer parking.",
+            "url": "https://tebocreeklodge.net",
+            "telephone": "+1-660-477-7777",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "293 SE Hwy PP",
+              "addressLocality": "Clinton",
+              "addressRegion": "MO",
+              "postalCode": "64735",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 38.3582,
+              "longitude": -93.6394
+            },
+            "amenityFeature": [
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Boat and Trailer Parking with Power Hookups",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Pet-Friendly Rooms",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Free High-Speed Wi-Fi",
+                "value": true
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/tebocreeklodgesportsbargrill",
+              "https://www.instagram.com/tebocreeklodgesportsbargrill/"
+            ]
+          },
+          {
+            "@type": ["BarOrPub", "Restaurant"],
+            "@id": "https://tebocreeklodge.net/#dining",
+            "name": "Tebo Creek Sports Bar & Grill",
+            "parentOrganization": {
+              "@id": "https://tebocreeklodge.net/#motel"
+            },
+            "url": "https://tebocreeklodge.net",
+            "telephone": "+1-660-477-7777",
+            "servesCuisine": [
+              "American",
+              "Burgers",
+              "Wings",
+              "Full Bar",
+              "Liquor & Cocktails",
+              "Draft Beer",
+              "Craft & Domestic Bottled Beer"
+            ],
+            "priceRange": "$$",
+            "hasMenu": "https://tebocreeklodge.net/#grill",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "293 SE Hwy PP",
+              "addressLocality": "Clinton",
+              "addressRegion": "MO",
+              "postalCode": "64735",
+              "addressCountry": "US"
+            },
+            "amenityFeature": [
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Full-Service Bar with Liquor & Cocktails",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Draft Beer on Tap",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Bottled Beer & Bucket Specials",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Weekend Live Karaoke",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Billiards & Pool Tables",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "TouchTunes Digital Jukebox",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Dance Floor",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Sports TV Screens",
+                "value": true
+              }
+            ],
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "11:00",
+                "closes": "23:00"
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/tebocreeklodgesportsbargrill",
+              "https://www.instagram.com/tebocreeklodgesportsbargrill/"
+            ]
+          },
+          {
+            "@type": "MusicEvent",
+            "@id": "https://tebocreeklodge.net/#weekend-karaoke",
+            "name": "Weekend Live Karaoke at Tebo Creek",
+            "description": "Live karaoke and dancing every Friday and Saturday night with full bar service, cold beer, cocktails, and TouchTunes.",
+            "location": {
+              "@id": "https://tebocreeklodge.net/#dining"
+            },
+            "eventSchedule": {
+              "@type": "Schedule",
+              "byDay": [
+                "https://schema.org/Friday",
+                "https://schema.org/Saturday"
+              ],
+              "startTime": "20:00",
+              "endTime": "01:00",
+              "scheduleTimezone": "America/Chicago"
+            },
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "isAccessibleForFree": true,
+            "typicalAgeRange": "21+"
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      :root {
+        --brand-blue: #0b4ea2;
+        --brand-blue-dark: #083f82;
+        --brand-blue-soft: #ebf3fa;
+        --ink: #0f172a;
+        --muted: #475569;
+        --border: #e2e8f0;
+        --card: #f8fafc;
+        --white: #ffffff;
+        --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--white);
+        color: var(--ink);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--brand-blue);
+        color: var(--white);
+        box-shadow: 0 4px 12px rgba(11, 78, 162, 0.18);
+      }
+
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        min-height: 56px;
+        width: min(1200px, calc(100% - 1rem));
+        margin: 0 auto;
+        padding: 0.6rem 0.5rem;
+      }
+
+      .topbar-text {
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .topbar-text.desktop {
+        display: inline-block;
+      }
+
+      .topbar-text.mobile {
+        display: none;
+      }
+
+      .topbar-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background: var(--white);
+        color: var(--brand-blue);
+        border-radius: 999px;
+        padding: 0.7rem 1rem;
+        font-size: 0.83rem;
+        font-weight: 800;
+        box-shadow: 0 3px 12px rgba(15, 23, 42, 0.12);
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      .topbar-button:hover,
+      .topbar-button:focus-visible {
+        transform: translateY(-1px);
+        background: #f8fafc;
+      }
+
+      .site-header {
+        background: #ffffff;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 2px 14px rgba(15, 23, 42, 0.03);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 1.2rem 0;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .brand img {
+        height: 92px;
+        width: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .nav-links a {
+        color: var(--muted);
+        border-bottom: 2px solid transparent;
+        padding-bottom: 0.35rem;
+        transition: color 0.2s ease, border-color 0.2s ease;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible,
+      .nav-links a.active {
+        color: var(--brand-blue);
+        border-color: var(--brand-blue);
+      }
+
+      .hero {
+        background: var(--brand-blue-soft);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .hero-inner {
+        padding: 5rem 0 3.5rem;
+        text-align: center;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        background: var(--brand-blue);
+        color: var(--white);
+        border-radius: 999px;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.7rem 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      h1 {
+        margin: 0 auto 1.25rem;
+        max-width: 760px;
+        font-size: clamp(2.5rem, 4vw, 5rem);
+        line-height: 1.08;
+        font-weight: 900;
+        color: var(--ink);
+      }
+
+      .hero p {
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        font-size: 1.08rem;
+        color: var(--muted);
+      }
+
+      .cta-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border: 2px solid var(--brand-blue);
+        border-radius: 0.9rem;
+        padding: 1rem 1.7rem;
+        font-weight: 800;
+        font-size: 1.02rem;
+        transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-1px);
+      }
+
+      .button.primary {
+        background: var(--brand-blue);
+        color: var(--white);
+        box-shadow: 0 12px 26px rgba(11, 78, 162, 0.2);
+      }
+
+      .button.primary:hover,
+      .button.primary:focus-visible {
+        background: var(--brand-blue-dark);
+      }
+
+      .button.secondary {
+        background: var(--white);
+        color: var(--brand-blue);
+      }
+
+      .button.secondary:hover,
+      .button.secondary:focus-visible {
+        background: #f8fafc;
+      }
+
+      .highlights {
+        padding: 4rem 0;
+      }
+
+      .section-heading {
+        text-align: center;
+        margin-bottom: 2.25rem;
+      }
+
+      .section-heading h2 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        line-height: 1.15;
+      }
+
+      .section-heading p {
+        max-width: 620px;
+        margin: 0 auto;
+        color: var(--muted);
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .feature-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        padding: 2rem 1.5rem;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+      }
+
+      .feature-card:hover,
+      .feature-card:focus-within {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .feature-card h3 {
+        margin: 0 0 0.75rem;
+        color: var(--brand-blue);
+        font-size: 1.4rem;
+      }
+
+      .feature-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .booking-banner {
+        background: var(--brand-blue);
+        color: var(--white);
+        padding: 3.5rem 0;
+      }
+
+      .booking-inner {
+        text-align: center;
+      }
+
+      .booking-inner h2 {
+        margin: 0 0 0.8rem;
+        font-size: clamp(2rem, 3vw, 2.8rem);
+      }
+
+      .booking-inner p {
+        margin: 0 auto 1.75rem;
+        max-width: 640px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.08rem;
+      }
+
+      .booking-inner .button {
+        background: var(--white);
+        color: var(--brand-blue);
+        border-color: var(--white);
+      }
+
+      .site-footer {
+        background: #f8fafc;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      .site-footer p {
+        margin: 0.25rem 0;
+      }
+
+      @media (max-width: 820px) {
+        .topbar-text.desktop {
+          display: none;
+        }
+
+        .topbar-text.mobile {
+          display: inline-block;
+        }
+
+        .nav {
+          flex-direction: column;
+          gap: 1rem;
+          padding: 1rem 0 1.2rem;
+        }
+
+        .nav-links {
+          gap: 1rem 1.2rem;
+        }
+
+        .feature-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-inner {
+          padding-top: 4rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .user-callout {
+          font-size: 0.8rem;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .cta-row {
+          display: grid;
+          gap: 0.85rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <span class="topbar-text desktop">Planning your trip to Truman Lake? Call for room availability &amp; rates!</span>
+        <span class="topbar-text mobile">Lodging &amp; Info Line</span>
+        <a href="tel:16604777777" class="topbar-button" aria-label="Call Tebo Creek Lodge at (660) 477-7777">
+          <span aria-hidden="true">📞</span>
+          <span>(660) 477-7777</span>
         </a>
+      </div>
     </div>
 
-    <!-- Navigation Bar with Logo -->
-    <nav class="bg-white border-b border-slate-200 px-6 py-3 shadow-sm">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <!-- Business Logo (Doubled Size) -->
-            <a href="index.html" class="flex items-center gap-3">
-                <img src="TCL-Logo-fw.jpg" alt="Tebo Creek Lodge Logo" class="h-28 w-auto object-contain">
-            </a>
-            
-            <!-- Navigation Links -->
-            <div class="flex flex-wrap justify-center gap-6 font-semibold text-sm tracking-wide">
-                <a href="index.html" style="color: #0B4EA2; border-color: #0B4EA2;" class="font-extrabold border-b-2 pb-1">Home</a>
-                <a href="lodging.html" class="text-slate-600 hover:text-blue-700 transition">Lodging</a>
-                <a href="bar-and-grill.html" class="text-slate-600 hover:text-blue-700 transition">TEBO's Sports Bar & Grill</a>
-                <a href="outdoors.html" class="text-slate-600 hover:text-blue-700 transition">Truman Lake Fishing</a>
-                <a href="contact.html" class="text-slate-600 hover:text-blue-700 transition">Location & Contact</a>
-            </div>
-        </div>
-    </nav>
+    <header class="site-header">
+      <div class="container nav" aria-label="Main navigation">
+        <a href="index.html" class="brand" aria-label="Tebo Creek Lodge home page">
+          <img src="TCL-Logo-fw.jpg" alt="Tebo Creek Lodge logo" />
+        </a>
 
-    <!-- Hero Section (Ice Blue Background with Deep Navy Headlines) -->
-    <header style="background-color: #EBF3FA;" class="relative py-20 px-6 text-center border-b border-slate-200">
-        <div class="max-w-4xl mx-auto">
-            <span style="background-color: #0B4EA2;" class="text-white text-xs font-bold uppercase px-4 py-1.5 rounded-full tracking-widest inline-block mb-4 shadow-sm">
-                Clinton, MO • Near Truman Lake Windsor Crossing
-            </span>
-            <h1 style="color: #0F172A;" class="text-4xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight">
-                Your Basecamp for Truman Lake Food, Fun & Spirits
-            </h1>
-            <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-                Only 1/4 mile to the nearest boat ramp at Windsor Crossing, Tebo Creek Lodge offers comfortable lodging for fishermen, hunters and travelers with an attached full service bar & grill, boat parking with electrical hookups, and easy access to Truman Lake fishing and recreation.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="tel:16604777777" style="background-color: #0B4EA2;" class="text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-blue-900 transition shadow-lg flex items-center justify-center gap-2">
-                    <span>📞</span> Call to Reserve Your Room
-                </a>
-                <a href="bar-and-grill.html" style="color: #0B4EA2; border-color: #0B4EA2;" class="bg-white border-2 font-bold px-8 py-4 rounded-lg text-lg hover:bg-slate-50 transition flex items-center justify-center gap-2">
-                    🍺 View Bar & Grill Menu
-                </a>
-            </div>
-        </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html" class="active">Home</a>
+          <a href="lodging.html">Lodging</a>
+          <a href="bar-and-grill.html">TEBO's Sports Bar &amp; Grill</a>
+          <a href="outdoors.html">Truman Lake Fishing</a>
+          <a href="contact.html">Location &amp; Contact</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- Core Highlights Grid (Slate Cards with Royal Blue Headings) -->
-    <main class="flex-grow">
-        <section class="py-16 px-6 max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 style="color: #0F172A;" class="text-3xl font-extrabold mb-3">Welcome to Tebo Creek Lodge featuring TEBO's Sports Bar & Grill</h2>
-                <p class="text-slate-600 max-w-xl mx-auto">Whether you're off the water after a day of crappie fishing or looking for some food, fun and spirits, we've got you covered.</p>
-            </div>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <span class="eyebrow">Clinton, MO • Near Truman Lake Windsor Crossing</span>
+          <h1 id="hero-title">Your Basecamp for Truman Lake Food, Fun &amp; Spirits</h1>
+          <p>
+            Only 1/4 mile to the nearest boat ramp at Windsor Crossing, Tebo Creek Lodge offers comfortable
+            lodging for fishermen, hunters, and travelers with an attached full-service bar &amp; grill, cold drinks,
+            live music, and easy access to the lake.
+          </p>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
-                    <div class="text-4xl mb-4">🎣</div>
-                    <h3 style="color: #0B4EA2;" class="text-xl font-bold mb-2">Sportsman Approved</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Conveniently located near Truman Lake ramps at Windsor Crossing. Spacious boat parking with electrical hookups and fish cleaning station access.
-                    </p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
-                    <div class="text-4xl mb-4">🍺</div>
-                    <h3 style="color: #0B4EA2;" class="text-xl font-bold mb-2">TEBO's Sports Bar & Grill</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Full service bar and grill entertainment hotspot with multiple TVs showing all the games, along with dancing, karaoke, darts, pool tables and more.
-                    </p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
-                    <div class="text-4xl mb-4">🛏️</div>
-                    <h3 style="color: #0B4EA2;" class="text-xl font-bold mb-2">Clean Rooms</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Air-conditioned, comfortable room quarters designed to give outdoorsmen and families a restful stay.
-                    </p>
-                </div>
-            </div>
-        </section>
+          <div class="cta-row">
+            <a href="tel:16604777777" class="button primary" aria-label="Call to reserve your room">
+              <span aria-hidden="true">📞</span>
+              <span>Call to Reserve Your Room</span>
+            </a>
+            <a href="bar-and-grill.html" class="button secondary" aria-label="View Tebo Creek bar and grill menu">
+              <span aria-hidden="true">🍺</span>
+              <span>View Bar &amp; Grill Menu</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <!-- Direct Phone Booking Callout (Royal Blue Banner with High-Contrast White Card) -->
-        <section style="background-color: #0B4EA2;" class="py-14 px-6 text-center text-white shadow-inner">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold text-white mb-3">Ready to Plan Your Trip?</h2>
-                <p class="text-blue-100 mb-8 text-lg">
-                    We manage all cabin reservations over the phone to ensure you get the exact setup, boat parking, and dates you need.
-                </p>
-                <a href="tel:16604777777" style="color: #0B4EA2;" class="inline-block bg-white font-extrabold text-xl px-8 py-4 rounded-lg hover:bg-slate-100 transition shadow-2xl">
-                    Call Us Direct: (660) 477-7777
-                </a>
-            </div>
-        </section>
+      <section class="highlights" aria-labelledby="welcome-heading">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="welcome-heading">Welcome to Tebo Creek Lodge featuring TEBO's Sports Bar &amp; Grill</h2>
+            <p>
+              Whether you're off the water after a day of crappie fishing or looking for food, fun, and spirits,
+              we've got you covered.
+            </p>
+          </div>
+
+          <div class="feature-grid" aria-label="Key features">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🎣</div>
+              <h3>Sportsman Approved</h3>
+              <p>
+                Conveniently located near Truman Lake ramps at Windsor Crossing. Spacious boat parking with electrical
+                hookups and fish cleaning station access.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🍺</div>
+              <h3>TEBO's Sports Bar &amp; Grill</h3>
+              <p>
+                Full-service bar and grill entertainment hotspot with multiple TVs showing all the games, along with
+                dancing, karaoke, darts, pool tables, and more.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🛏️</div>
+              <h3>Clean Rooms</h3>
+              <p>
+                Air-conditioned, comfortable room quarters designed to give outdoorsmen and families a restful stay.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking-banner" aria-labelledby="booking-title">
+        <div class="container booking-inner">
+          <h2 id="booking-title">Ready to Plan Your Trip?</h2>
+          <p>
+            We manage all cabin reservations over the phone to ensure you get the exact setup, boat parking, and dates
+            you need.
+          </p>
+          <a href="tel:16604777777" class="button" aria-label="Call us directly at (660) 477-7777">
+            <span aria-hidden="true">📞</span>
+            <span>Call Us Direct: (660) 477-7777</span>
+          </a>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-100 py-8 px-6 text-center text-slate-500 text-sm border-t border-slate-200">
-        <p>&copy; 2026 Tebo Creek Lodge, Sports Bar & Grill • Clinton, MO</p>
-        <p class="mt-2 text-xs text-slate-400">Located near Truman Lake, Windsor Crossing. All room reservations strictly via telephone.</p>
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 Tebo Creek Lodge, Sports Bar &amp; Grill • Clinton, MO</p>
+        <p>Located near Truman Lake, Windsor Crossing. All room reservations strictly via telephone.</p>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>
