@@ -1,36 +1,44 @@
+/* ============================================
+   TEBO'S SPORTS BAR & GRILL - THEME STYLES
+   Blue + White + Orange accent for friendly
+   sports bar / lodge atmosphere
+   ============================================ */
+
 /* Base theme variables */
 :root {
-  /* Primary Blue - from logo */
+  /* Primary Blues - from logo, professional foundation */
   --color-brand-blue: #0B4EA2;
   --color-brand-blue-dark: #053570;
   --color-brand-blue-light: #1B6FD6;
   
-  /* Accent - complementary for CTAs */
-  --color-accent-teal: #0D9488;
-  --color-accent-teal-dark: #0F766E;
-  --color-accent-teal-light: #14B8A6;
+  /* Sports Bar Orange - warm, inviting, energetic */
+  --color-accent-orange: #FF6B35;
+  --color-accent-orange-dark: #E55A24;
+  --color-accent-orange-light: #FFA366;
   
   /* Backgrounds & Surfaces */
-  --color-bg-base: #f8fafc;
-  --color-surface-card: #ffffff;
-  --color-surface-alt: #f1f5f9;
+  --color-bg-base: #0f1419;
+  --color-bg-dark: #0a0d12;
+  --color-surface-card: #1a1f28;
+  --color-surface-alt: #252d38;
   
-  /* Text */
-  --color-text-main: #0f172a;
-  --color-text-muted: #475569;
-  --color-text-light: #64748b;
+  /* Text - high contrast on dark backgrounds */
+  --color-text-main: #ffffff;
+  --color-text-muted: #b0b9c6;
+  --color-text-light: #8a92a0;
   
   /* Utility Colors */
-  --color-border: #e2e8f0;
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-error: #ef4444;
+  --color-border: #363f4d;
+  --color-success: #22c55e;
+  --color-warning: #fbbf24;
+  --color-error: #ff4444;
   
   /* Design Tokens */
-  --radius-card: 12px;
+  --radius-card: 16px;
   --radius-button: 8px;
-  --shadow-elevation: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
-  --shadow-hover: 0 10px 25px -5px rgba(11, 78, 162, 0.15);
+  --shadow-elevation: 0 8px 32px rgba(11, 78, 162, 0.2);
+  --shadow-hover: 0 12px 48px rgba(255, 107, 53, 0.3);
+  --shadow-glow: 0 0 30px rgba(255, 107, 53, 0.25);
 }
 
 /* Reset & base styling */
@@ -40,78 +48,710 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-bg-base);
   color: var(--color-text-main);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
+  letter-spacing: 0.3px;
 }
 
-/* Cards & sections */
-.card, .container {
+/* ============================================
+   TOPBAR - Sticky Call Header
+   ============================================ */
+.topbar {
+  background: linear-gradient(135deg, var(--color-brand-blue-dark) 0%, var(--color-brand-blue) 100%);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 12px rgba(11, 78, 162, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.topbar-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.topbar-text.mobile {
+  display: none;
+}
+
+.topbar-button {
+  background-color: var(--color-accent-orange);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.topbar-button:hover {
+  background-color: var(--color-accent-orange-dark);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+.site-header {
+  background: linear-gradient(180deg, var(--color-brand-blue) 0%, var(--color-surface-alt) 100%);
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 16px rgba(11, 78, 162, 0.25);
+  position: relative;
+}
+
+.container.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.brand img {
+  height: auto;
+  max-width: 180px;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  padding: 0.5rem;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: var(--color-accent-orange);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ============================================
+   CARDS & CONTAINERS
+   ============================================ */
+.card,
+.container {
   background: var(--color-surface-card);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-elevation);
   padding: 1.5rem;
+  border: 1px solid var(--color-border);
 }
 
-/* Primary Button - Brand Blue */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 1.5rem;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  background: linear-gradient(135deg, var(--color-brand-blue) 0%, var(--color-brand-blue-dark) 50%, rgba(255, 107, 53, 0.1) 100%);
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 2rem 1.5rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--color-accent-orange);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 107, 53, 0.1);
+  border-radius: 50px;
+}
+
+.hero-inner h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 1.5rem 0 1rem;
+  line-height: 1.2;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-inner p {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.cta-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
 .btn-primary,
 .button.primary {
-  background-color: var(--color-brand-blue);
+  background: linear-gradient(135deg, var(--color-brand-blue) 0%, var(--color-brand-blue-light) 100%);
   color: #ffffff;
   text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
   border-radius: var(--radius-button);
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(11, 78, 162, 0.25);
+  text-align: center;
 }
 
 .btn-primary:hover,
 .button.primary:hover {
-  background-color: var(--color-brand-blue-dark);
+  background: linear-gradient(135deg, var(--color-brand-blue-dark) 0%, var(--color-brand-blue) 100%);
   box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
-/* Secondary Button - Teal Accent */
+.btn-primary:active,
+.button.primary:active {
+  transform: translateY(-1px);
+}
+
+/* Secondary Button - Orange/Sports Energy */
 .button.secondary {
-  background-color: var(--color-accent-teal);
+  background: linear-gradient(135deg, var(--color-accent-orange) 0%, var(--color-accent-orange-light) 100%);
   color: #ffffff;
   text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
   border-radius: var(--radius-button);
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(255, 107, 53, 0.25);
+  text-align: center;
 }
 
 .button.secondary:hover {
-  background-color: var(--color-accent-teal-dark);
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--color-accent-orange-dark) 0%, var(--color-accent-orange) 100%);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-3px);
+}
+
+.button.secondary:active {
+  transform: translateY(-1px);
 }
 
 /* Tertiary Button - Outline */
 .button.tertiary {
   background-color: transparent;
-  color: var(--color-brand-blue);
+  color: var(--color-accent-orange);
   text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
   border-radius: var(--radius-button);
-  font-weight: 600;
-  border: 2px solid var(--color-brand-blue);
+  font-weight: 700;
+  border: 2px solid var(--color-accent-orange);
   cursor: pointer;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .button.tertiary:hover {
-  background-color: var(--color-brand-blue);
+  background-color: var(--color-accent-orange);
   color: #ffffff;
+  box-shadow: var(--shadow-glow);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   HIGHLIGHTS / FEATURES SECTION
+   ============================================ */
+.highlights {
+  padding: 3rem 1rem;
+  background: var(--color-bg-base);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.section-heading p {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: var(--color-surface-card);
+  padding: 2rem;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-brand-blue), var(--color-accent-orange));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-accent-orange);
+  box-shadow: 0 16px 40px rgba(255, 107, 53, 0.15);
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.feature-card p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   BOOKING BANNER
+   ============================================ */
+.booking-banner {
+  background: linear-gradient(135deg, var(--color-accent-orange) 0%, var(--color-accent-orange-dark) 100%);
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-banner::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.booking-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 2rem;
+}
+
+.booking-banner h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.booking-banner p {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.booking-banner .button {
+  background: #ffffff;
+  color: var(--color-accent-orange);
+  font-weight: 700;
+}
+
+.booking-banner .button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  background: var(--color-bg-dark);
+  color: var(--color-text-muted);
+  padding: 3rem 1rem 1.5rem;
+  border-top: 2px solid var(--color-border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.footer-section h3 {
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--color-accent-orange);
+  padding-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.business-hours {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem 2rem;
+}
+
+.business-hours dt {
+  font-weight: 600;
+  color: var(--color-accent-orange);
+}
+
+.business-hours dd {
+  color: var(--color-text-muted);
+}
+
+.info-block {
+  margin-bottom: 1.5rem;
+}
+
+.info-block strong {
+  color: var(--color-accent-orange);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: var(--color-accent-orange);
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-surface-card);
+  border-radius: 50%;
+  color: var(--color-accent-orange);
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+  background: var(--color-accent-orange);
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: var(--shadow-glow);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.copyright {
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom p {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom a {
+  color: var(--color-accent-orange);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+  .topbar-text.desktop {
+    display: none;
+  }
+
+  .topbar-text.mobile {
+    display: inline;
+  }
+
+  .container.nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .hero-inner h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-inner p {
+    font-size: 1rem;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-row .button {
+    width: 100%;
+  }
+
+  .section-heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-banner h2 {
+    font-size: 1.5rem;
+  }
+
+  .booking-inner {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .topbar-text {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .brand img {
+    max-width: 140px;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-inner h1 {
+    font-size: 1.5rem;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+  }
+
+  .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+  .button {
+    font-weight: 800;
+    border-width: 2px;
+  }
+
+  .nav-links a {
+    font-weight: 700;
+  }
+}
+
+/* Dark mode (already dark by default, but ensuring preference) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-bg-base);
+  }
 }
