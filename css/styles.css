@@ -1,13 +1,36 @@
 /* Base theme variables */
 :root {
-  --color-brand-blue: #1b4965;
-  --color-accent-amber: #c86428;
-  --color-bg-base: #f7f9fa;
+  /* Primary Blue - from logo */
+  --color-brand-blue: #0B4EA2;
+  --color-brand-blue-dark: #053570;
+  --color-brand-blue-light: #1B6FD6;
+  
+  /* Accent - complementary for CTAs */
+  --color-accent-teal: #0D9488;
+  --color-accent-teal-dark: #0F766E;
+  --color-accent-teal-light: #14B8A6;
+  
+  /* Backgrounds & Surfaces */
+  --color-bg-base: #f8fafc;
   --color-surface-card: #ffffff;
-  --color-text-main: #1e293b;
-  --color-text-muted: #64748b;
+  --color-surface-alt: #f1f5f9;
+  
+  /* Text */
+  --color-text-main: #0f172a;
+  --color-text-muted: #475569;
+  --color-text-light: #64748b;
+  
+  /* Utility Colors */
+  --color-border: #e2e8f0;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  
+  /* Design Tokens */
   --radius-card: 12px;
+  --radius-button: 8px;
   --shadow-elevation: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+  --shadow-hover: 0 10px 25px -5px rgba(11, 78, 162, 0.15);
 }
 
 /* Reset & base styling */
@@ -32,13 +55,63 @@ body {
   padding: 1.5rem;
 }
 
-/* Buttons */
-.btn-primary {
-  background-color: var(--color-accent-amber);
+/* Primary Button - Brand Blue */
+.btn-primary,
+.button.primary {
+  background-color: var(--color-brand-blue);
   color: #ffffff;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: var(--radius-button);
   font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.button.primary:hover {
+  background-color: var(--color-brand-blue-dark);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Secondary Button - Teal Accent */
+.button.secondary {
+  background-color: var(--color-accent-teal);
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-button);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button.secondary:hover {
+  background-color: var(--color-accent-teal-dark);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Tertiary Button - Outline */
+.button.tertiary {
+  background-color: transparent;
+  color: var(--color-brand-blue);
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-button);
+  font-weight: 600;
+  border: 2px solid var(--color-brand-blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button.tertiary:hover {
+  background-color: var(--color-brand-blue);
+  color: #ffffff;
 }
