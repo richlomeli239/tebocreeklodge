@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location & Contact | Tebo Creek Lodge Clinton MO</title>
-    <meta name="description" content="Find Tebo Creek Lodge & TEBO's Sports Bar & Grill near Clinton, MO in Leesville, near Truman Lake Windsor Crossing. Driving directions, phone, and hours.">
-    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- 1. Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 2. Keep grid/padding classes active without breaking custom CSS -->
+    <script>
+      tailwind.config = {
+        corePlugins: {
+          preflight: false,
+        }
+      }
+    </script>
+
+    <!-- 3. Your custom CSS (with the 's') -->
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased min-h-screen flex flex-col">
 
