@@ -8,6 +8,124 @@
     <link rel="canonical" href="https://tebocreeklodge.net/bar-and-grill.html">
     <link rel="icon" href="https://tebocreeklodge.net/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Structured Data: Restaurant, Bar & Live Karaoke Event -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["BarOrPub", "Restaurant"],
+          "@id": "https://tebocreeklodge.net/#dining",
+          "name": "TEBO's Sports Bar & Grill",
+          "parentOrganization": {
+            "@id": "https://tebocreeklodge.net/#business"
+          },
+          "description": "Full-service sports bar and grill featuring Fernando's TEBOritto, hand-crafted burgers, ice-cold draft beer, big dancefloor, weekend karaoke, TouchTunes jukebox, pool tables, and darts near Truman Lake.",
+          "url": "https://tebocreeklodge.net/bar-and-grill.html",
+          "telephone": "+1-660-477-7777",
+          "servesCuisine": ["American", "Burgers", "Wings", "Bar Food"],
+          "priceRange": "$$",
+          "image": "https://tebocreeklodge.net/TCL-Logo-fw.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "293 SE Hwy PP",
+            "addressLocality": "Clinton",
+            "addressRegion": "MO",
+            "postalCode": "64735",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 38.3582,
+            "longitude": -93.6394
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "11:00",
+              "closes": "23:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Monday",
+              "opens": "00:00",
+              "closes": "00:00"
+            }
+          ],
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Live Karaoke",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Dance Floor",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Pool Tables",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Electronic Darts",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Flat-Screen Sports TVs",
+              "value": true
+            }
+          ]
+        },
+        {
+          "@type": "Event",
+          "@id": "https://tebocreeklodge.net/#weekend-karaoke",
+          "name": "Weekend Live Karaoke & Dancing at TEBO's",
+          "description": "Live karaoke and dancing every Friday and Saturday night with full bar service, cold beer, and TouchTunes jukebox.",
+          "url": "https://tebocreeklodge.net/bar-and-grill.html",
+          "location": {
+            "@id": "https://tebocreeklodge.net/#dining"
+          },
+          "eventSchedule": {
+            "@type": "Schedule",
+            "byDay": [
+              "https://schema.org/Friday",
+              "https://schema.org/Saturday"
+            ],
+            "startTime": "20:00",
+            "endTime": "01:00",
+            "scheduleTimezone": "America/Chicago"
+          },
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "isAccessibleForFree": true,
+          "typicalAgeRange": "21+"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://tebocreeklodge.net/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "TEBO's Sports Bar & Grill",
+              "item": "https://tebocreeklodge.net/bar-and-grill.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -94,11 +212,11 @@
         </div>
       </section>
 
-   <!-- Menu & Specials Highlights -->
+      <!-- Menu & Specials Highlights -->
       <section class="highlights" aria-labelledby="menu-heading" style="padding-top: 0;">
         <div class="container">
           <div class="section-heading">
-            <h2 id="menu-heading">Menu &amp; Game Day Highlights</h2>
+            <h2 id="menu-heading">Menu & Game Day Highlights</h2>
             <p>Cold spirits, freshly made meals, and game-day viewing near Truman Lake.</p>
           </div>
 
@@ -106,12 +224,12 @@
           <div class="feature-grid" role="region" aria-label="Menu and sports highlights" style="grid-template-columns: repeat(auto-fit, minmax(300px, 480px)); justify-content: center;">
             <article class="feature-card">
               <div class="feature-icon" aria-hidden="true">🍔</div>
-              <h3>Great Food &amp; Cold Spirits</h3>
+              <h3>Great Food & Cold Spirits</h3>
               <ul style="list-style: none; padding-left: 0; margin-top: 1rem; line-height: 2;">
-                <li><strong>Hand-Crafted Burgers &amp; Fernando's TEBOritto:</strong> Local Favorite</li>
-                <li><strong>Ice-Cold Draft &amp; Bottled Beer:</strong> Sub-Zero Cold</li>
-                <li><strong>Wings &amp; Sandwiches along with Daily Specials:</strong> Cooked Fresh</li>
-                <li><strong>Full Cocktail Bar &amp; Spirits:</strong> Top Shelf Available</li>
+                <li><strong>Hand-Crafted Burgers & Fernando's TEBOritto:</strong> Local Favorite</li>
+                <li><strong>Ice-Cold Draft & Bottled Beer:</strong> Sub-Zero Cold</li>
+                <li><strong>Wings & Sandwiches along with Daily Specials:</strong> Cooked Fresh</li>
+                <li><strong>Full Cocktail Bar & Spirits:</strong> Top Shelf Available</li>
               </ul>
             </article>
 
