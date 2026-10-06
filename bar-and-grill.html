@@ -82,23 +82,27 @@
             }
           ]
         },
-        {
+{
           "@type": "Event",
           "@id": "https://tebocreeklodge.net/#weekend-karaoke",
           "name": "Weekend Live Karaoke & Dancing at TEBO's",
           "description": "Live karaoke and dancing every Friday and Saturday night with full bar service, cold beer, and TouchTunes jukebox.",
           "url": "https://tebocreeklodge.net/bar-and-grill.html",
+          "startDate": "2026-10-09T20:00:00-05:00",
+          "endDate": "2026-10-10T01:00:00-05:00",
           "location": {
             "@id": "https://tebocreeklodge.net/#dining"
           },
           "eventSchedule": {
             "@type": "Schedule",
+            "startDate": "2026-10-09",
+            "repeatFrequency": "P1W",
             "byDay": [
               "https://schema.org/Friday",
               "https://schema.org/Saturday"
             ],
-            "startTime": "20:00",
-            "endTime": "01:00",
+            "startTime": "20:00:00",
+            "endTime": "01:00:00",
             "scheduleTimezone": "America/Chicago"
           },
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
