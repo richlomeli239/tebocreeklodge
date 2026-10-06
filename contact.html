@@ -8,6 +8,74 @@
     <link rel="canonical" href="https://tebocreeklodge.net/contact.html">
     <link rel="icon" href="https://tebocreeklodge.net/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Structured Data: ContactPage, LocalBusiness & Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ContactPage",
+          "@id": "https://tebocreeklodge.net/contact.html#webpage",
+          "url": "https://tebocreeklodge.net/contact.html",
+          "name": "Location & Contact Information | Tebo Creek Lodge",
+          "description": "Directions, driving info, operating hours, and phone reservations for Tebo Creek Lodge and TEBO's Sports Bar & Grill near Truman Lake Windsor Crossing.",
+          "mainEntity": {
+            "@type": "LocalBusiness",
+            "@id": "https://tebocreeklodge.net/#business",
+            "name": "Tebo Creek Lodge",
+            "telephone": "+1-660-477-7777",
+            "image": "https://tebocreeklodge.net/TCL-Logo-fw.jpg",
+            "hasMap": "https://maps.google.com/?q=Tebo+Creek+Lodge+293+SE+Hwy+PP+Clinton+MO+64735",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "293 SE Hwy PP",
+              "addressLocality": "Clinton",
+              "addressRegion": "MO",
+              "postalCode": "64735",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 38.3582,
+              "longitude": -93.6394
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "11:00",
+                "closes": "23:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Monday",
+                "opens": "00:00",
+                "closes": "00:00"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://tebocreeklodge.net/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Location & Contact",
+              "item": "https://tebocreeklodge.net/contact.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -16,7 +84,7 @@
       <div class="topbar-inner">
         <span class="topbar-text desktop">Have questions or need directions? Call our main desk!</span>
         <span class="topbar-text mobile">Contact & Info Line</span>
-        <a href="tel:+16604777777" class="topbar-button" aria-label="Call Tebo Creek Lodge at (660) 477-7777">
+        <a href="tel:16604777777" class="topbar-button" aria-label="Call Tebo Creek Lodge at (660) 477-7777">
           <span aria-hidden="true">📞</span>
           <span>(660) 477-7777</span>
         </a>
@@ -186,5 +254,6 @@
         </div>
       </div>
     </footer>
+
 </body>
 </html>
