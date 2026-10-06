@@ -235,41 +235,34 @@
 
     <!-- Structured data: Weekend Karaoke Event -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Event",
-        "@id": "https://tebocreeklodge.net/#weekend-karaoke",
-        "name": "Weekend Live Karaoke at Tebo Creek",
-        "description": "Join us for live karaoke and dancing every Friday and Saturday night. Full bar service, cold beer, cocktails, and TouchTunes digital jukebox.",
-        "url": "https://tebocreeklodge.net/bar-and-grill.html",
-        "location": {
-          "@type": "Place",
-          "@id": "https://tebocreeklodge.net/#dining",
-          "name": "TEBO's Sports Bar &amp; Grill",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "293 SE Hwy PP",
-            "addressLocality": "Clinton",
-            "addressRegion": "MO",
-            "postalCode": "64735",
-            "addressCountry": "US"
-          }
-        },
-        "eventSchedule": {
-          "@type": "Schedule",
-          "byDay": [
-            "https://schema.org/Friday",
-            "https://schema.org/Saturday"
-          ],
-          "startTime": "20:00",
-          "endTime": "01:00",
-          "scheduleTimezone": "America/Chicago"
-        },
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "isAccessibleForFree": true,
-        "typicalAgeRange": "21+"
-      }
+{
+          "@type": "Event",
+          "@id": "https://tebocreeklodge.net/#weekend-karaoke",
+          "name": "Weekend Live Karaoke & Dancing at TEBO's",
+          "description": "Live karaoke and dancing every Friday and Saturday night with full bar service, cold beer, and TouchTunes jukebox.",
+          "url": "https://tebocreeklodge.net/bar-and-grill.html",
+          "startDate": "2026-10-09T20:00:00-05:00",
+          "endDate": "2026-10-10T01:00:00-05:00",
+          "location": {
+            "@id": "https://tebocreeklodge.net/#dining"
+          },
+          "eventSchedule": {
+            "@type": "Schedule",
+            "startDate": "2026-10-09",
+            "repeatFrequency": "P1W",
+            "byDay": [
+              "https://schema.org/Friday",
+              "https://schema.org/Saturday"
+            ],
+            "startTime": "20:00:00",
+            "endTime": "01:00:00",
+            "scheduleTimezone": "America/Chicago"
+          },
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "isAccessibleForFree": true,
+          "typicalAgeRange": "21+"
+        }
     </script>
 
     <!-- Breadcrumb Schema -->
