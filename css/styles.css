@@ -286,8 +286,7 @@ img {
 /* ============================================
    BUTTONS - Playful & Interactive
    ============================================ */
-.button,
-.btn-primary {
+.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -302,15 +301,13 @@ img {
   transition: all 0.25s ease;
 }
 
-.button.primary,
-.btn-primary {
+.button.primary {
   background: linear-gradient(135deg, var(--color-brand-blue) 0%, var(--color-brand-blue-light) 100%);
   color: var(--color-text-inverse);
   box-shadow: var(--shadow-button);
 }
 
-.button.primary:hover,
-.btn-primary:hover {
+.button.primary:hover {
   background: linear-gradient(135deg, var(--color-brand-blue-dark) 0%, var(--color-brand-blue) 100%);
   transform: translateY(-2px);
   box-shadow: 0 12px 24px rgba(11, 78, 162, 0.22);
@@ -705,8 +702,7 @@ img {
     width: 100%;
   }
 
-  .button,
-  .btn-primary {
+  .button {
     width: 100%;
   }
 
@@ -753,8 +749,7 @@ img {
     font-size: 1rem;
   }
 
-  .button,
-  .btn-primary {
+  .button {
     padding: 0.75rem 1.2rem;
     font-size: 0.9rem;
   }
@@ -786,7 +781,6 @@ img {
 
 @media (prefers-contrast: more) {
   .button,
-  .btn-primary,
   .nav-links a {
     font-weight: 900;
     border: 1px solid currentColor;
