@@ -328,17 +328,6 @@ img {
   box-shadow: 0 12px 24px rgba(245, 124, 44, 0.28);
 }
 
-.button.tertiary {
-  background: transparent;
-  border: 2px solid var(--color-accent-orange);
-  color: var(--color-accent-orange);
-}
-
-.button.tertiary:hover {
-  background: var(--color-accent-orange);
-  color: var(--color-text-inverse);
-}
-
 /* ============================================
    HIGHLIGHTS / FEATURES - Friendly Cards
    ============================================ */
