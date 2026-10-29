@@ -87,6 +87,24 @@
     </script>
 </head>
 <body>
+    <!-- Translucent Slow Motion Video Montage Background (Encompassing the Entire Page) -->
+    <div class="video-bg-container" aria-hidden="true">
+      <video
+        id="bg-video-primary"
+        class="video-bg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="videos/contact-lake-truman-poster.jpg"
+      >
+        <source src="videos/contact-lake-truman-aerial.mp4" type="video/mp4">
+        <source src="videos/contact-lake-aerial-drone.mp4" type="video/mp4">
+        Your browser does not support HTML5 video background.
+      </video>
+      <div class="video-overlay"></div>
+    </div>
 
     <!-- Sticky Call Header -->
     <div class="topbar" role="banner">

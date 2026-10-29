@@ -59,7 +59,7 @@ html {
 }
 
 body {
-  background-color: var(--color-bg-base);
+  background-color: #0b1420;
   color: var(--color-text-main);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
@@ -223,7 +223,7 @@ img {
    HERO SECTION - Bold & Energetic
    ============================================ */
 .hero {
-  background: linear-gradient(135deg, var(--color-brand-blue) 0%, rgba(11, 78, 162, 0.94) 45%, rgba(245, 124, 44, 0.08) 100%);
+  background: transparent;
   padding: 3.5rem 0;
   overflow: hidden;
   position: relative;
@@ -236,7 +236,7 @@ img {
   right: -15%;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(255, 157, 92, 0.15) 0%, rgba(255, 157, 92, 0) 65%);
+  background: radial-gradient(circle, rgba(255, 157, 92, 0.12) 0%, rgba(255, 157, 92, 0) 65%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -254,15 +254,18 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(8, 30, 58, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: var(--color-text-inverse);
-  border: 1px solid rgba(255, 157, 92, 0.4);
+  border: 1px solid rgba(245, 124, 44, 0.6);
   border-radius: var(--radius-pill);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hero-inner h1 {
@@ -272,14 +275,16 @@ img {
   line-height: 1.1;
   letter-spacing: -0.02em;
   font-weight: 900;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
 }
 
 .hero-inner p {
   margin: 1rem auto 0;
   max-width: 700px;
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 1.1rem;
+  color: #ffffff;
+  font-size: 1.12rem;
   line-height: 1.75;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .cta-row {
@@ -334,32 +339,43 @@ img {
 }
 
 /* ============================================
-   HIGHLIGHTS / FEATURES - Friendly Cards
+   HIGHLIGHTS / FEATURES - Frosted Bubbles
    ============================================ */
 .highlights {
   padding: 3.5rem 0;
-  background: var(--color-bg-base);
+  background: transparent;
 }
 
 .section-heading {
-  max-width: 800px;
-  margin: 0 auto 2.5rem;
+  max-width: 900px;
+  margin: 0 auto 3rem;
   text-align: center;
+  background: linear-gradient(135deg, rgba(8, 30, 58, 0.92) 0%, rgba(11, 46, 89, 0.9) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 2px solid rgba(245, 124, 44, 0.65);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .section-heading h2 {
-  color: var(--color-text-main);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  line-height: 1.15;
+  color: #ffffff !important;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.2;
   letter-spacing: -0.02em;
   font-weight: 900;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .section-heading p {
-  color: var(--color-text-soft);
+  color: #ffeadb !important;
   font-size: 1.08rem;
-  line-height: 1.8;
+  font-weight: 500;
+  line-height: 1.75;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
 }
 
 .feature-grid {
@@ -371,10 +387,12 @@ img {
 }
 
 .feature-card {
-  background: var(--color-surface-card);
-  border: 2px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.06);
   padding: 2.25rem 1.75rem;
   text-align: center;
   transition: all 0.3s ease;
@@ -398,7 +416,7 @@ img {
 .feature-card:hover {
   transform: translateY(-6px);
   border-color: var(--color-accent-orange);
-  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 22px 48px rgba(245, 124, 44, 0.2), 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 .feature-card:hover::before {
@@ -435,9 +453,14 @@ img {
 .booking-banner {
   background: linear-gradient(135deg, var(--color-accent-orange) 0%, var(--color-accent-orange-dark) 100%);
   color: var(--color-text-inverse);
-  padding: 3rem 0;
+  padding: 3.25rem 1.5rem;
   position: relative;
   overflow: hidden;
+  border-radius: var(--radius-lg);
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
 }
 
 .booking-banner::before {
@@ -447,7 +470,7 @@ img {
   left: 5%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -462,19 +485,21 @@ img {
 }
 
 .booking-banner h2 {
-  color: var(--color-text-inverse);
+  color: #ffffff !important;
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   line-height: 1.15;
   letter-spacing: -0.02em;
   font-weight: 900;
   margin-bottom: 0.8rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .booking-banner p {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1.08rem;
+  color: #ffffff !important;
+  font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .booking-banner .button {
@@ -486,6 +511,8 @@ img {
 
 .booking-banner .button:hover {
   background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
 
 /* ============================================
