@@ -13,7 +13,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/styles.css">
     <title>Truman Lake Fishing & Outdoors | Tebo Creek Lodge Clinton MO</title>
     <meta
       name="description"
@@ -21,6 +20,12 @@
     />
     <link rel="canonical" href="https://tebocreeklodge.net/outdoors.html" />
     <link rel="icon" href="https://tebocreeklodge.net/favicon.ico" type="image/x-icon" />
+    <!-- Preconnect & Preloads for Performance & Core Web Vitals -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" as="image" href="videos/home-lake-fishing-poster.jpg" fetchpriority="high">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>
@@ -33,7 +38,7 @@
         muted
         loop
         playsinline
-        preload="auto"
+        preload="metadata"
         poster="videos/home-lake-fishing-poster.jpg"
       >
         <source src="videos/home-lake-fishing-bass.mp4" type="video/mp4">
@@ -47,7 +52,7 @@
       <div class="topbar-inner">
         <span class="topbar-text desktop">Questions about water conditions or boat parking? Call us!</span>
         <span class="topbar-text mobile">Outdoors Info Line</span>
-        <a href="tel:+16604777777" class="topbar-button" aria-label="Call Tebo Creek Lodge at (660) 477-7777">
+        <a href="tel:+16604777777" class="topbar-button" aria-label="Call (660) 477-7777">
           <span aria-hidden="true">📞</span>
           <span>(660) 477-7777</span>
         </a>
@@ -58,7 +63,10 @@
     <header class="site-header" role="banner">
       <div class="container nav">
         <a href="index.html" class="brand" aria-label="Tebo Creek Lodge home page">
-          <img src="TCL-Logo-fw26.png" alt="Tebo Creek Lodge logo" width="200" height="92" />
+          <picture>
+            <source srcset="TCL-Logo-fw26.avif" type="image/avif">
+            <img src="TCL-Logo-fw26.png" alt="Tebo Creek Lodge logo" width="200" height="92" decoding="async" />
+          </picture>
         </a>
 
         <nav class="nav-links" aria-label="Primary navigation">
@@ -84,11 +92,11 @@
           </p>
 
           <div class="cta-row">
-            <a href="tel:+16604777777" class="button primary" aria-label="Call Tebo Creek Lodge">
+            <a href="tel:+16604777777" class="button primary" aria-label="Call Main Desk: (660) 477-7777">
               <span aria-hidden="true">📞</span>
               <span>Call Main Desk: (660) 477-7777</span>
             </a>
-            <a href="bar-and-grill.html" class="button secondary" aria-label="View sports bar and grill">
+            <a href="bar-and-grill.html" class="button secondary" aria-label="TEBO's Bar &amp; Grill">
               <span aria-hidden="true">🍺</span>
               <span>TEBO's Bar &amp; Grill</span>
             </a>
@@ -143,7 +151,7 @@
           <p>
             Stop by TEBO's Sports Bar &amp; Grill after your day on the water for hot food and cold draft beer!
           </p>
-          <a href="tel:+16604777777" class="button" aria-label="Call main desk at (660) 477-7777">
+          <a href="tel:+16604777777" class="button" aria-label="Call Main Desk: (660) 477-7777">
             <span aria-hidden="true">📞</span>
             <span>Call Main Desk: (660) 477-7777</span>
           </a>

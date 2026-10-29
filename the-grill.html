@@ -12,6 +12,12 @@
     </script>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preconnect & Preloads for Performance & Core Web Vitals -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" as="image" href="videos/bar-grill-poster.jpg" fetchpriority="high">
+    <link rel="stylesheet" href="css/styles.css">
     <title>The Grill at Tebo Creek Lodge | Home of the TEBOritto | Food Near Truman Lake Clinton MO</title>
     <meta name="description" content="Looking for great food near Truman Lake? The Grill at Tebo Creek Lodge in Clinton, MO is home of the legendary TEBOritto, hand-crafted burgers, rib-eye steak sandwiches, catfish strips, buffalo wings & cold drinks. Kitchen open Tue–Sun noon–11 PM (closed Mondays). Call ahead or to-go: (660) 477-7777.">
     <meta name="keywords" content="The Grill, Tebo Creek Lodge, food near Truman Lake, restaurants Clinton MO, Windsor Crossing food, places to eat Clinton Missouri, best burger Truman Lake, Fernando's TEBOritto, steak sandwich, catfish strips, wings, sports bar grill Clinton MO, lake food takeout, Henry County restaurants">
@@ -234,7 +240,7 @@
         muted
         loop
         playsinline
-        preload="auto"
+        preload="metadata"
         poster="videos/bar-grill-poster.jpg"
       >
         <source src="videos/friends-bar-toast-slowmo.mp4" type="video/mp4">
@@ -249,7 +255,7 @@
       <div class="topbar-inner">
         <span class="topbar-text desktop">⏰ Kitchen Open Tue–Sun: Noon – 11 PM (Closed Mon) • Call Ahead &amp; To-Go Orders!</span>
         <span class="topbar-text mobile">Call Ahead &amp; To-Go Orders</span>
-        <a href="tel:16604777777" class="topbar-button" aria-label="Call The Grill at (660) 477-7777">
+        <a href="tel:16604777777" class="topbar-button" aria-label="Call (660) 477-7777">
           <span aria-hidden="true">📞</span>
           <span>(660) 477-7777</span>
         </a>
@@ -260,7 +266,10 @@
     <header class="site-header" role="banner">
       <div class="container nav">
         <a href="index.html" class="brand" aria-label="Tebo Creek Lodge home page">
-          <img src="TCL-Logo-fw26.png" alt="Tebo Creek Lodge Logo" width="200" height="92" />
+          <picture>
+            <source srcset="TCL-Logo-fw26.avif" type="image/avif">
+            <img src="TCL-Logo-fw26.png" alt="Tebo Creek Lodge Logo" width="200" height="92" decoding="async" />
+          </picture>
         </a>
 
         <nav class="nav-links" aria-label="Primary navigation">
@@ -286,11 +295,11 @@
           </p>
 
           <div class="cta-row">
-            <a href="tel:16604777777" class="button primary" aria-label="Call (660) 477-7777 to place a to-go or call ahead food order">
+            <a href="tel:16604777777" class="button primary" aria-label="Call Ahead &amp; To-Go: (660) 477-7777">
               <span aria-hidden="true">📞</span>
               <span>Call Ahead &amp; To-Go: (660) 477-7777</span>
             </a>
-            <a href="#menu-tabs" class="button secondary" aria-label="Explore The Grill menu items">
+            <a href="#menu-tabs" class="button secondary" aria-label="Explore The Menu">
               <span aria-hidden="true">📋</span>
               <span>Explore The Menu</span>
             </a>
@@ -320,7 +329,7 @@
             </p>
           </div>
           <div class="kitchen-hours-cta">
-            <a href="tel:16604777777" class="button primary" style="font-size: 1.05rem;" aria-label="Click to call (660) 477-7777 for to-go orders">
+            <a href="tel:16604777777" class="button primary" style="font-size: 1.05rem;" aria-label="Click to Call (660) 477-7777">
               <span aria-hidden="true">📞</span>
               <span>Click to Call (660) 477-7777</span>
             </a>
@@ -879,11 +888,11 @@
               Whether you're picking up dinner on your way back to the lodge, feeding a crew on the water, or hosting a family feast, <strong>Tebo Creek Lodge Sports Bar &amp; Grill</strong> has you covered. <strong>Large group orders are gladly prepared when called in advance!</strong>
             </p>
             <div class="cta-row" style="justify-content: center; margin-top: 1.75rem;">
-              <a href="tel:16604777777" class="button banner-call-btn" aria-label="Call The Grill directly at (660) 477-7777 to order">
+              <a href="tel:16604777777" class="button banner-call-btn" aria-label="Call The Grill: (660) 477-7777">
                 <span aria-hidden="true">📞</span>
                 <span>Call The Grill: (660) 477-7777</span>
               </a>
-              <a href="contact.html" class="button banner-directions-btn" aria-label="Find driving directions to Tebo Creek Lodge">
+              <a href="contact.html" class="button banner-directions-btn" aria-label="Get Directions (Near Windsor Crossing)">
                 <span aria-hidden="true">📍</span>
                 <span>Get Directions (Near Windsor Crossing)</span>
               </a>
@@ -895,7 +904,7 @@
     </main>
 
     <!-- Floating Mobile Call Button (One-Touch Order Ahead) -->
-    <a href="tel:16604777777" class="mobile-float-call-btn" aria-label="Call (660) 477-7777 for to-go orders">
+    <a href="tel:16604777777" class="mobile-float-call-btn" aria-label="Order To-Go: (660) 477-7777">
       <span aria-hidden="true">📞</span>
       <span>Order To-Go: (660) 477-7777</span>
     </a>
