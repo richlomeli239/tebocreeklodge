@@ -13,6 +13,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Preconnect & Preloads for Performance & Core Web Vitals -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" as="image" href="videos/outdoors-boat-lake-poster.jpg" fetchpriority="high">
     <link rel="stylesheet" href="css/styles.css">
     <title>Tebo Creek Lodge | Motel &amp; Sports Bar near Truman Lake | Clinton, MO</title>
 
@@ -294,12 +299,31 @@
   </head>
 
   <body>
+    <!-- Translucent Slow Motion Video Montage Background (Encompassing the Entire Page) -->
+    <div class="video-bg-container" aria-hidden="true">
+      <video
+        id="bg-video-primary"
+        class="video-bg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="videos/outdoors-boat-lake-poster.jpg"
+      >
+        <source src="videos/outdoors-boat-lake-women.mp4" type="video/mp4">
+        <source src="videos/outdoors-speedboat-lake-slowmo.mp4" type="video/mp4">
+        Your browser does not support HTML5 video background.
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+
     <!-- Sticky Call Header -->
     <div class="topbar" role="banner">
       <div class="topbar-inner">
         <span class="topbar-text desktop">Planning your trip to Truman Lake? Call for room availability &amp; rates!</span>
         <span class="topbar-text mobile">Lodging &amp; Info Line</span>
-        <a href="tel:+16604777777" class="topbar-button" aria-label="Call Tebo Creek Lodge at (660) 477-7777">
+        <a href="tel:+16604777777" class="topbar-button" aria-label="Call (660) 477-7777">
           <span aria-hidden="true">📞</span>
           <span>(660) 477-7777</span>
         </a>
@@ -310,15 +334,19 @@
     <header class="site-header" role="banner">
       <div class="container nav">
         <a href="index.html" class="brand" aria-label="Tebo Creek Lodge home page">
-          <img src="TCL-Logo-fw26.png" alt="Tebo Creek Lodge logo" width="200" height="92" />
+          <picture>
+            <source srcset="TCL-Logo-fw26.avif" type="image/avif">
+            <img src="TCL-Logo-fw26.png" alt="Tebo Creek Lodge logo" width="200" height="92" decoding="async" />
+          </picture>
         </a>
 
         <nav class="nav-links" aria-label="Primary navigation">
           <a href="index.html" class="active" aria-current="page">HOME</a>
           <a href="lodging.html">LODGING</a>
-          <a href="bar-and-grill.html">TEBO's SPORTS BAR & GRILL</a>
+          <a href="bar-and-grill.html">TEBO's SPORTS BAR &amp; GRILL</a>
+          <a href="the-grill.html">THE GRILL</a>
           <a href="outdoors.html">TRUMAN LAKE FISHING</a>
-          <a href="contact.html">LOCATION & CONTACT</a>
+          <a href="contact.html">LOCATION &amp; CONTACT</a>
         </nav>
       </div>
     </header>
@@ -337,11 +365,11 @@
           </p>
 
           <div class="cta-row">
-            <a href="tel:+16604777777" class="button primary" aria-label="Call to reserve your room at Tebo Creek Lodge">
+            <a href="tel:+16604777777" class="button primary" aria-label="Call to Reserve Your Room">
               <span aria-hidden="true">📞</span>
               <span>Call to Reserve Your Room</span>
             </a>
-            <a href="bar-and-grill.html" class="button secondary" aria-label="View Tebo Creek bar and grill menu">
+            <a href="bar-and-grill.html" class="button secondary" aria-label="View Bar &amp; Grill Menu">
               <span aria-hidden="true">🍺</span>
               <span>View Bar &amp; Grill Menu</span>
             </a>
@@ -398,7 +426,7 @@
             We manage all motel room reservations over the phone to ensure you get the exact setup, boat parking, and dates
             you need.
           </p>
-          <a href="tel:+16604777777" class="button" aria-label="Call us directly at (660) 477-7777">
+          <a href="tel:+16604777777" class="button" aria-label="Call Us Direct: (660) 477-7777">
             <span aria-hidden="true">📞</span>
             <span>Call Us Direct: (660) 477-7777</span>
           </a>
@@ -442,6 +470,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="lodging.html">Lodging</a></li>
               <li><a href="bar-and-grill.html">Sports Bar &amp; Grill</a></li>
+              <li><a href="the-grill.html">The Grill (Menu)</a></li>
               <li><a href="outdoors.html">Truman Lake</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>

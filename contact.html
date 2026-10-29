@@ -12,11 +12,16 @@
     </script>   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preconnect & Preloads for Performance & Core Web Vitals -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" as="image" href="videos/contact-lake-truman-poster.jpg" fetchpriority="high">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Location & Contact | Tebo Creek Lodge Clinton MO Truman Lake</title>
     <meta name="description" content="TEBO's Sports Bar & Grill attached to Tebo Creek Lodge. Full Service bar & grill with the area's largest dancefloor & sound system, weekend karaoke, Touchtunes jukebox, darts, pool tables">
     <link rel="canonical" href="https://tebocreeklodge.net/contact.html">
     <link rel="icon" href="https://tebocreeklodge.net/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Structured Data: ContactPage, LocalBusiness & Breadcrumb -->
     <script type="application/ld+json">
@@ -87,13 +92,31 @@
     </script>
 </head>
 <body>
+    <!-- Translucent Slow Motion Video Montage Background (Encompassing the Entire Page) -->
+    <div class="video-bg-container" aria-hidden="true">
+      <video
+        id="bg-video-primary"
+        class="video-bg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="videos/contact-lake-truman-poster.jpg"
+      >
+        <source src="videos/contact-lake-truman-aerial.mp4" type="video/mp4">
+        <source src="videos/contact-lake-aerial-drone.mp4" type="video/mp4">
+        Your browser does not support HTML5 video background.
+      </video>
+      <div class="video-overlay"></div>
+    </div>
 
     <!-- Sticky Call Header -->
     <div class="topbar" role="banner">
       <div class="topbar-inner">
         <span class="topbar-text desktop">Have questions or need directions? Call our main desk!</span>
         <span class="topbar-text mobile">Contact & Info Line</span>
-        <a href="tel:16604777777" class="topbar-button" aria-label="Call Tebo Creek Lodge at (660) 477-7777">
+        <a href="tel:16604777777" class="topbar-button" aria-label="Call (660) 477-7777">
           <span aria-hidden="true">📞</span>
           <span>(660) 477-7777</span>
         </a>
@@ -104,15 +127,19 @@
     <header class="site-header" role="banner">
       <div class="container nav">
         <a href="index.html" class="brand" aria-label="Tebo Creek Lodge home page">
-          <img src="TCL-Logo-fw26.png" alt="Tebo Creek Lodge logo" width="200" height="92" />
+          <picture>
+            <source srcset="TCL-Logo-fw26.avif" type="image/avif">
+            <img src="TCL-Logo-fw26.png" alt="Tebo Creek Lodge logo" width="200" height="92" decoding="async" />
+          </picture>
         </a>
 
         <nav class="nav-links" aria-label="Primary navigation">
           <a href="index.html">HOME</a>
           <a href="lodging.html">LODGING</a>
-          <a href="bar-and-grill.html">TEBO's SPORTS BAR & GRILL</a>
+          <a href="bar-and-grill.html">TEBO's SPORTS BAR &amp; GRILL</a>
+          <a href="the-grill.html">THE GRILL</a>
           <a href="outdoors.html">TRUMAN LAKE FISHING</a>
-          <a href="contact.html" class="active" aria-current="page">LOCATION & CONTACT</a>
+          <a href="contact.html" class="active" aria-current="page">LOCATION &amp; CONTACT</a>
         </nav>
       </div>
     </header>
@@ -128,7 +155,7 @@
             Located near Clinton, Missouri in Leesville (Highway PP at Tightwad)—just minutes away from Truman Lake & Windsor Crossing. Call to book your room or ask about daily bar specials!
           </p>
           <div class="cta-row">
-            <a href="tel:16604777777" class="button primary" aria-label="Call Tebo Creek Lodge">
+            <a href="tel:16604777777" class="button primary" aria-label="Call (660) 477-7777">
               <span aria-hidden="true">📞</span>
               <span>(660) 477-7777</span>
             </a>
@@ -234,6 +261,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="lodging.html">Lodging</a></li>
               <li><a href="bar-and-grill.html">Sports Bar &amp; Grill</a></li>
+              <li><a href="the-grill.html">The Grill (Menu)</a></li>
               <li><a href="outdoors.html">Truman Lake</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>

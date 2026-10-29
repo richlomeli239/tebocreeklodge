@@ -8,7 +8,8 @@ describe('Google Analytics Initialization', () => {
     'lodging.html',
     'outdoors.html',
     'contact.html',
-    'bar-and-grill.html'
+    'bar-and-grill.html',
+    'the-grill.html'
   ];
 
   test.each(htmlFiles)('%s initializes Google Analytics correctly', (file) => {
