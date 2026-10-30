@@ -13,19 +13,16 @@ describe('Structured Data (JSON-LD)', () => {
   ];
 
   test.each(htmlFiles)('%s contains valid JSON-LD if present', (file) => {
-    // Note: the-grill.html may not exist, let's gracefully handle it or just let it fail if it does not exist
-    if (fs.existsSync(path.join(__dirname, file))) {
-        const html = fs.readFileSync(path.join(__dirname, file), 'utf8');
-        const dom = new JSDOM(html);
-        const window = dom.window;
+    const html = fs.readFileSync(path.join(__dirname, file), 'utf8');
+    const dom = new JSDOM(html);
+    const window = dom.window;
 
-        const scripts = window.document.querySelectorAll('script[type="application/ld+json"]');
+    const scripts = window.document.querySelectorAll('script[type="application/ld+json"]');
 
-        scripts.forEach(script => {
-          // Must parse as valid JSON without throwing
-          expect(() => JSON.parse(script.textContent)).not.toThrow();
-        });
-    }
+    scripts.forEach(script => {
+      // Must parse as valid JSON without throwing
+      expect(() => JSON.parse(script.textContent)).not.toThrow();
+    });
   });
 
   test('lodging.html contains valid Motel structured data', () => {
