@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" as="image" href="videos/outdoors-boat-lake-poster.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="videos/home-lake-fishing-poster.jpg" fetchpriority="high">
     <link rel="stylesheet" href="css/styles.css">
     <title>Tebo Creek Lodge | Motel &amp; Sports Bar near Truman Lake | Clinton, MO</title>
 
@@ -308,14 +308,13 @@
         muted
         playsinline
         preload="metadata"
-        poster="videos/outdoors-boat-lake-poster.jpg"
+        poster="videos/home-lake-fishing-poster.jpg"
       >
-        <source src="videos/outdoors-boat-lake-women.mp4" type="video/mp4">
         <source src="videos/home-lake-fishing-bass.mp4" type="video/mp4">
-        <source src="videos/home-hunting-season-ozarks.mp4" type="video/mp4">
         <source src="videos/home-deer-wildlife-ozarks.mp4" type="video/mp4">
         <source src="videos/home-misty-lake-fishing.mp4" type="video/mp4">
         <source src="videos/outdoors-speedboat-lake-slowmo.mp4" type="video/mp4">
+        <source src="videos/outdoors-boat-lake-women.mp4" type="video/mp4">
         Your browser does not support HTML5 video background.
       </video>
       <div class="video-overlay"></div>
@@ -537,14 +536,13 @@
             video.pause();
           }
 
-          // Rotating sequence: Lake boat cruise, Truman Lake bass catch, Ozark hunting season, whitetail deer, misty lake fishing, speedboat
+          // Rotating sequence: Truman Lake bass catch, Missouri whitetail deer, misty lake fishing, speedboat, and lake boat cruise
           const playlist = [
-            'videos/outdoors-boat-lake-women.mp4',
             'videos/home-lake-fishing-bass.mp4',
-            'videos/home-hunting-season-ozarks.mp4',
             'videos/home-deer-wildlife-ozarks.mp4',
             'videos/home-misty-lake-fishing.mp4',
-            'videos/outdoors-speedboat-lake-slowmo.mp4'
+            'videos/outdoors-speedboat-lake-slowmo.mp4',
+            'videos/outdoors-boat-lake-women.mp4'
           ];
           let currentTrack = 0;
 

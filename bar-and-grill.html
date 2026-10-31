@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" as="image" href="videos/bar-pool-couples-poster.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="videos/bar-pool-table-poster.jpg" fetchpriority="high">
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Structured Data: Restaurant, Bar & Live Karaoke Event -->
@@ -155,13 +155,11 @@
         muted
         playsinline
         preload="metadata"
-        poster="videos/bar-pool-couples-poster.jpg"
+        poster="videos/bar-pool-table-poster.jpg"
       >
-        <source src="videos/bar-pool-couples.mp4" type="video/mp4">
         <source src="videos/bar-pool-table-shot.mp4" type="video/mp4">
         <source src="videos/bar-darts-action.mp4" type="video/mp4">
         <source src="videos/bar-dance-floor.mp4" type="video/mp4">
-        <source src="videos/bar-karaoke-mic-singing.mp4" type="video/mp4">
         Your browser does not support HTML5 video background.
       </video>
       <div class="video-overlay"></div>
@@ -426,13 +424,11 @@
             video.pause();
           }
 
-          // Rotating sequence: Pool couples, pool table shot, darts, wood dance floor, live karaoke
+          // Rotating sequence: Pool table shot, darts action, and real-wood dance floor
           const playlist = [
-            'videos/bar-pool-couples.mp4',
             'videos/bar-pool-table-shot.mp4',
             'videos/bar-darts-action.mp4',
-            'videos/bar-dance-floor.mp4',
-            'videos/bar-karaoke-mic-singing.mp4'
+            'videos/bar-dance-floor.mp4'
           ];
           let currentTrack = 0;
 
