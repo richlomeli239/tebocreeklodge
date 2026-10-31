@@ -306,12 +306,15 @@
         class="video-bg"
         autoplay
         muted
-        loop
         playsinline
         preload="metadata"
         poster="videos/outdoors-boat-lake-poster.jpg"
       >
         <source src="videos/outdoors-boat-lake-women.mp4" type="video/mp4">
+        <source src="videos/home-lake-fishing-bass.mp4" type="video/mp4">
+        <source src="videos/home-hunting-season-ozarks.mp4" type="video/mp4">
+        <source src="videos/home-deer-wildlife-ozarks.mp4" type="video/mp4">
+        <source src="videos/home-misty-lake-fishing.mp4" type="video/mp4">
         <source src="videos/outdoors-speedboat-lake-slowmo.mp4" type="video/mp4">
         Your browser does not support HTML5 video background.
       </video>
@@ -404,10 +407,17 @@
           <div class="feature-grid" role="region" aria-label="Key features">
             <article class="feature-card">
               <div class="feature-icon" aria-hidden="true">🎣</div>
-              <h3>Sportsman Approved</h3>
+              <h3>World-Class Bass & Crappie Fishing</h3>
               <p>
-                Conveniently located near Truman Lake ramps at Windsor Crossing. Spacious boat parking with electrical
-                hookups and fish cleaning station access.
+                Only 1/4 mile to Windsor Crossing ramps on Truman Lake. Ample boat parking with electrical plug-ins, battery charging stations, and dedicated fish cleaning facilities.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🦌</div>
+              <h3>Premier Hunting Headquarters</h3>
+              <p>
+                The ultimate basecamp for hunting groups and solo hunters during Missouri whitetail deer, wild turkey, and waterfowl seasons. Convenient access to thousands of acres of Truman Reservoir public hunting lands.
               </p>
             </article>
 
@@ -415,16 +425,15 @@
               <div class="feature-icon" aria-hidden="true">🍺</div>
               <h3>TEBO's Sports Bar &amp; Grill</h3>
               <p>
-                Full-service bar and grill entertainment hotspot with multiple TVs showing all the games, along with
-                dancing, karaoke, darts, pool tables, and more.
+                Full-service bar and grill entertainment hotspot featuring Fernando's famous TEBOritto, steaks, burgers, ice-cold drafts, pool tables, darts, punch game, country line dancing, and weekend karaoke.
               </p>
             </article>
 
             <article class="feature-card">
               <div class="feature-icon" aria-hidden="true">🛏️</div>
-              <h3>Clean Rooms</h3>
+              <h3>Clean, Restful Sportsman Rooms</h3>
               <p>
-                Air-conditioned, comfortable room quarters designed to give outdoorsmen and families a restful stay.
+                Comfortable air-conditioned lodging designed for sportsmen and travelers to get a solid night's rest right next to the lake after an epic day in the woods or on the water.
               </p>
             </article>
           </div>
@@ -513,7 +522,43 @@
         </div>
       </div>
     </footer>
-      <!-- Mobile Navigation Toggle Script -->
+    <!-- Video Playback & Seamless Playlist Rotation Script -->
+    <script>
+      (function() {
+        const video = document.getElementById('bg-video-primary');
+        if (video) {
+          video.playbackRate = 0.65;
+          video.play().catch(function() {
+            video.muted = true;
+            video.play().catch(function() {});
+          });
+
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            video.pause();
+          }
+
+          // Rotating sequence: Lake boat cruise, Truman Lake bass catch, Ozark hunting season, whitetail deer, misty lake fishing, speedboat
+          const playlist = [
+            'videos/outdoors-boat-lake-women.mp4',
+            'videos/home-lake-fishing-bass.mp4',
+            'videos/home-hunting-season-ozarks.mp4',
+            'videos/home-deer-wildlife-ozarks.mp4',
+            'videos/home-misty-lake-fishing.mp4',
+            'videos/outdoors-speedboat-lake-slowmo.mp4'
+          ];
+          let currentTrack = 0;
+
+          video.addEventListener('ended', function() {
+            currentTrack = (currentTrack + 1) % playlist.length;
+            video.src = playlist[currentTrack];
+            video.playbackRate = 0.65;
+            video.play().catch(function() {});
+          });
+        }
+      })();
+    </script>
+
+    <!-- Mobile Navigation Toggle Script -->
     <script>
       (function() {
         const toggle = document.querySelector(".nav-toggle");

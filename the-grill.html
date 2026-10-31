@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" as="image" href="videos/bar-grill-poster.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="videos/bar-women-beer-poster.jpg" fetchpriority="high">
     <link rel="stylesheet" href="css/styles.css">
     <title>The Grill at Tebo Creek Lodge | Home of the TEBOritto | Food Near Truman Lake Clinton MO</title>
     <meta name="description" content="Looking for great food near Truman Lake? The Grill at Tebo Creek Lodge in Clinton, MO is home of the legendary TEBOritto, hand-crafted burgers, rib-eye steak sandwiches, catfish strips, buffalo wings & cold drinks. Kitchen open Tue–Sun noon–11 PM (closed Mondays). Call ahead or to-go: (660) 477-7777.">
@@ -238,12 +238,14 @@
         class="video-bg"
         autoplay
         muted
-        loop
         playsinline
         preload="metadata"
-        poster="videos/bar-grill-poster.jpg"
+        poster="videos/bar-women-beer-poster.jpg"
       >
-        <source src="videos/friends-bar-toast-slowmo.mp4" type="video/mp4">
+        <source src="videos/bar-women-beer-toast.mp4" type="video/mp4">
+        <source src="videos/beer-cheers.mp4" type="video/mp4">
+        <source src="videos/bar-woman-craft-beer.mp4" type="video/mp4">
+        <source src="videos/bar-draft-tap-pour.mp4" type="video/mp4">
         <source src="videos/bar-atmosphere.mp4" type="video/mp4">
         Your browser does not support HTML5 video background.
       </video>
@@ -1013,11 +1015,13 @@
             video.pause();
           }
 
-          // Slow-motion playlist sequence between bar and grill clips
+          // Slow-motion playlist sequence: women toasting craft beer on Friday night, cheers, & bar atmosphere
           const playlist = [
-            'videos/friends-bar-toast-slowmo.mp4',
-            'videos/bar-atmosphere.mp4',
-            'videos/beer-cheers.mp4'
+            'videos/bar-women-beer-toast.mp4',
+            'videos/beer-cheers.mp4',
+            'videos/bar-woman-craft-beer.mp4',
+            'videos/bar-draft-tap-pour.mp4',
+            'videos/bar-atmosphere.mp4'
           ];
           let currentTrack = 0;
 

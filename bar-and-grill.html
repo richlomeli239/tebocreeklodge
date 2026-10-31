@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" as="image" href="videos/bar-karaoke-poster.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="videos/bar-pool-couples-poster.jpg" fetchpriority="high">
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Structured Data: Restaurant, Bar & Live Karaoke Event -->
@@ -153,12 +153,15 @@
         class="video-bg"
         autoplay
         muted
-        loop
         playsinline
         preload="metadata"
-        poster="videos/bar-karaoke-poster.jpg"
+        poster="videos/bar-pool-couples-poster.jpg"
       >
-        <source src="videos/bar-karaoke-singing-party.mp4" type="video/mp4">
+        <source src="videos/bar-pool-couples.mp4" type="video/mp4">
+        <source src="videos/bar-pool-table-shot.mp4" type="video/mp4">
+        <source src="videos/bar-darts-action.mp4" type="video/mp4">
+        <source src="videos/bar-punch-bag.mp4" type="video/mp4">
+        <source src="videos/bar-dance-floor.mp4" type="video/mp4">
         <source src="videos/bar-karaoke-mic-singing.mp4" type="video/mp4">
         Your browser does not support HTML5 video background.
       </video>
@@ -243,23 +246,41 @@
             <p>Food, fun, and spirits with the area's largest dancefloor, powerhouse sound system, and games.</p>
           </div>
 
-          <div class="feature-grid" role="region" aria-label="Entertainment highlights">
-            <article class="feature-card">
-              <div class="feature-icon" aria-hidden="true">🎤</div>
-              <h3>Karaoke Weekend Nights</h3>
-              <p>Take the stage and sing your favorite country, rock, and classic hits with friends.</p>
-            </article>
-
-            <article class="feature-card">
-              <div class="feature-icon" aria-hidden="true">💃</div>
-              <h3>Dancefloor & Jukebox</h3>
-              <p>Spacious dancefloor to dance or sing karaoke on the weekends or play our Touchtunes jukebox anytime.</p>
-            </article>
-
+          <div class="feature-grid" role="region" aria-label="Entertainment highlights" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
             <article class="feature-card">
               <div class="feature-icon" aria-hidden="true">🎱</div>
-              <h3>Pool Tables & Darts</h3>
-              <p>Challenger pool tables and electronic dartboards for friendly competition.</p>
+              <h3>Pool Tables & Billiards</h3>
+              <p>Green felt challenger tables under classic pool lamps and glowing neon signs. Great for couples and friends shooting a game over cold beers.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🎯</div>
+              <h3>Darts & Tournaments</h3>
+              <p>Regulation electronic dartboards and rustic wood backings for casual matches, league throwers, and friendly bar competition.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🥊</div>
+              <h3>Arcade Punch Bag Game</h3>
+              <p>Test your striking power! Challenge friends on our electronic arcade punching bag game and compete for the night's high score.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🤠</div>
+              <h3>Country Line Dancing</h3>
+              <p>The Ozarks' favorite gathering spot! Spacious real-wood dance floor and warm wood-paneled hall holding up to 200 guests for boot-scooting line dances.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🎤</div>
+              <h3>Live Weekend Karaoke</h3>
+              <p>Grab the mic and own the spotlight! Sing your favorite country, rock, and classic anthems with a lively lake crowd cheering you on.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🎶</div>
+              <h3>TouchTunes Jukebox</h3>
+              <p>Control the soundtrack from your phone or right at the bar. Stream million-track music playlists through our powerhouse sound system.</p>
             </article>
           </div>
         </div>
@@ -390,6 +411,42 @@
         </div>
       </div>
     </footer>
+
+    <!-- Video Playback & Seamless Playlist Rotation Script -->
+    <script>
+      (function() {
+        const video = document.getElementById('bg-video-primary');
+        if (video) {
+          video.playbackRate = 0.65;
+          video.play().catch(function() {
+            video.muted = true;
+            video.play().catch(function() {});
+          });
+
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            video.pause();
+          }
+
+          // Rotating sequence: Pool couples, pool table shot, darts, punch bag game, wood dance floor, live karaoke
+          const playlist = [
+            'videos/bar-pool-couples.mp4',
+            'videos/bar-pool-table-shot.mp4',
+            'videos/bar-darts-action.mp4',
+            'videos/bar-punch-bag.mp4',
+            'videos/bar-dance-floor.mp4',
+            'videos/bar-karaoke-mic-singing.mp4'
+          ];
+          let currentTrack = 0;
+
+          video.addEventListener('ended', function() {
+            currentTrack = (currentTrack + 1) % playlist.length;
+            video.src = playlist[currentTrack];
+            video.playbackRate = 0.65;
+            video.play().catch(function() {});
+          });
+        }
+      })();
+    </script>
 
     <!-- Mobile Navigation Toggle Script -->
     <script>

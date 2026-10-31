@@ -36,12 +36,14 @@
         class="video-bg"
         autoplay
         muted
-        loop
         playsinline
         preload="metadata"
         poster="videos/home-lake-fishing-poster.jpg"
       >
         <source src="videos/home-lake-fishing-bass.mp4" type="video/mp4">
+        <source src="videos/home-misty-lake-fishing.mp4" type="video/mp4">
+        <source src="videos/outdoors-boat-lake-women.mp4" type="video/mp4">
+        <source src="videos/outdoors-speedboat-lake-slowmo.mp4" type="video/mp4">
         <source src="videos/home-lake-boat-misty.mp4" type="video/mp4">
         Your browser does not support HTML5 video background.
       </video>
@@ -238,7 +240,42 @@
         </div>
       </div>
     </footer>
-      <!-- Mobile Navigation Toggle Script -->
+    <!-- Video Playback & Seamless Playlist Rotation Script -->
+    <script>
+      (function() {
+        const video = document.getElementById('bg-video-primary');
+        if (video) {
+          video.playbackRate = 0.65;
+          video.play().catch(function() {
+            video.muted = true;
+            video.play().catch(function() {});
+          });
+
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            video.pause();
+          }
+
+          // Rotating sequence: Bass fishing, misty morning lake boat, lake cruise, speedboat, and calm lake
+          const playlist = [
+            'videos/home-lake-fishing-bass.mp4',
+            'videos/home-misty-lake-fishing.mp4',
+            'videos/outdoors-boat-lake-women.mp4',
+            'videos/outdoors-speedboat-lake-slowmo.mp4',
+            'videos/home-lake-boat-misty.mp4'
+          ];
+          let currentTrack = 0;
+
+          video.addEventListener('ended', function() {
+            currentTrack = (currentTrack + 1) % playlist.length;
+            video.src = playlist[currentTrack];
+            video.playbackRate = 0.65;
+            video.play().catch(function() {});
+          });
+        }
+      })();
+    </script>
+
+    <!-- Mobile Navigation Toggle Script -->
     <script>
       (function() {
         const toggle = document.querySelector(".nav-toggle");

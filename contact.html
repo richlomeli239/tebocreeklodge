@@ -99,7 +99,6 @@
         class="video-bg"
         autoplay
         muted
-        loop
         playsinline
         preload="metadata"
         poster="videos/contact-lake-truman-poster.jpg"
@@ -304,6 +303,38 @@
         </div>
       </div>
     </footer>
+
+    <!-- Video Playback & Seamless Playlist Rotation Script -->
+    <script>
+      (function() {
+        const video = document.getElementById('bg-video-primary');
+        if (video) {
+          video.playbackRate = 0.65;
+          video.play().catch(function() {
+            video.muted = true;
+            video.play().catch(function() {});
+          });
+
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            video.pause();
+          }
+
+          // Rotating sequence: Lake Truman aerial drone shots
+          const playlist = [
+            'videos/contact-lake-truman-aerial.mp4',
+            'videos/contact-lake-aerial-drone.mp4'
+          ];
+          let currentTrack = 0;
+
+          video.addEventListener('ended', function() {
+            currentTrack = (currentTrack + 1) % playlist.length;
+            video.src = playlist[currentTrack];
+            video.playbackRate = 0.65;
+            video.play().catch(function() {});
+          });
+        }
+      })();
+    </script>
 
     <!-- Mobile Navigation Toggle Script -->
     <script>

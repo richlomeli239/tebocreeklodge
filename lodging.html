@@ -126,12 +126,13 @@
         class="video-bg"
         autoplay
         muted
-        loop
         playsinline
         preload="metadata"
         poster="videos/lodging-motel-bed-poster.jpg"
       >
         <source src="videos/lodging-motel-bed-relax.mp4" type="video/mp4">
+        <source src="videos/lodging-sportsman-cabin-lake.mp4" type="video/mp4">
+        <source src="videos/lodging-motel-bed-comfort.mp4" type="video/mp4">
         Your browser does not support HTML5 video background.
       </video>
       <div class="video-overlay"></div>
@@ -324,6 +325,39 @@
         </div>
       </div>
     </footer>
+
+    <!-- Video Playback & Seamless Playlist Rotation Script -->
+    <script>
+      (function() {
+        const video = document.getElementById('bg-video-primary');
+        if (video) {
+          video.playbackRate = 0.65;
+          video.play().catch(function() {
+            video.muted = true;
+            video.play().catch(function() {});
+          });
+
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            video.pause();
+          }
+
+          // Rotating sequence: Rest on comfortable motel bed, lakeside sportsman's cabin, and bedroom comfort
+          const playlist = [
+            'videos/lodging-motel-bed-relax.mp4',
+            'videos/lodging-sportsman-cabin-lake.mp4',
+            'videos/lodging-motel-bed-comfort.mp4'
+          ];
+          let currentTrack = 0;
+
+          video.addEventListener('ended', function() {
+            currentTrack = (currentTrack + 1) % playlist.length;
+            video.src = playlist[currentTrack];
+            video.playbackRate = 0.65;
+            video.play().catch(function() {});
+          });
+        }
+      })();
+    </script>
 
     <!-- Mobile Navigation Toggle Script -->
     <script>
