@@ -1554,7 +1554,7 @@ img {
    POLICY & COMPLIANCE PAGES
    ============================================ */
 .policy-card {
-  background: rgba(6, 26, 52, 0.82);
+  background: rgba(6, 26, 52, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1.5px solid rgba(245, 124, 44, 0.4);
@@ -1562,7 +1562,7 @@ img {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
   padding: 2.25rem;
   margin-bottom: 2rem;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .policy-card h2 {
@@ -1580,19 +1580,24 @@ img {
 }
 
 .policy-card h3 {
-  color: var(--color-accent-orange-light) !important;
-  font-size: 1.15rem;
-  font-weight: 700;
+  color: #ff9d5c !important;
+  font-size: 1.2rem;
+  font-weight: 800;
   margin-top: 1.4rem;
   margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .policy-card p,
-.policy-card li {
-  color: #e2e8f0;
-  line-height: 1.8;
-  font-size: 0.98rem;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+.policy-card li,
+.policy-card ul,
+.policy-card ol,
+.policy-card span,
+.policy-card div {
+  color: #ffffff !important;
+  line-height: 1.85;
+  font-size: 1.05rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .policy-card ul {
@@ -1601,31 +1606,42 @@ img {
 }
 
 .policy-card ul li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff !important;
 }
 
 .policy-card strong {
-  color: #ffffff;
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.policy-card code {
+  color: #ffffff !important;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
 }
 
 .policy-card a {
-  color: var(--color-accent-orange-light);
+  color: #ffb077 !important;
   text-decoration: underline;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .policy-card a:hover {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .policy-effective-badge {
   display: inline-block;
-  background: rgba(245, 124, 44, 0.2);
-  border: 1px solid var(--color-accent-orange);
-  color: #ffffff;
-  padding: 0.4rem 1rem;
+  background: rgba(245, 124, 44, 0.25);
+  border: 1.5px solid var(--color-accent-orange);
+  color: #ffffff !important;
+  padding: 0.45rem 1.15rem;
   border-radius: var(--radius-pill);
-  font-weight: 700;
-  font-size: 0.9rem;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
