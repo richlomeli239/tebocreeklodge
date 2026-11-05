@@ -9,7 +9,8 @@ describe('Structured Data (JSON-LD)', () => {
     'outdoors.html',
     'contact.html',
     'bar-and-grill.html',
-    'the-grill.html'
+    'the-grill.html',
+    'privacy.html'
   ];
 
   test.each(htmlFiles)('%s contains valid JSON-LD if present', (file) => {
